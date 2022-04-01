@@ -1,19 +1,19 @@
 <?
 /**
- * Classe Template é uma classe que separa o código php do Html
+ * Classe Template ï¿½ uma classe que separa o cï¿½digo php do Html
  * 
  * <i>Criada em: 05/08/2006
- * Última Alteração: 05/10/2006</i>
+ * ï¿½ltima Alteraï¿½ï¿½o: 05/10/2006</i>
  * 
  * @author Zaib Tecnologia
  * @version 1.0
- * @copyright Copyright © 2006, Zaib Tecnologia
+ * @copyright Copyright ï¿½ 2006, Zaib Tecnologia
  * @package Class
  */
 class cTemplate{
    
    /**
-    * Seta na Variável o valor
+    * Seta na Variï¿½vel o valor
     */
    private $var;
    
@@ -31,26 +31,26 @@ class cTemplate{
     }
 
 	/**
-	 * Gera as variáveis da Página
-	 * @param $var string » Nome da Variável template
-	 * @param $value string » Valor da variável template
+	 * Gera as variï¿½veis da Pï¿½gina
+	 * @param $var string ï¿½ Nome da Variï¿½vel template
+	 * @param $value string ï¿½ Valor da variï¿½vel template
 	 * 
 	 * Ecemplo de Uso: 
-	 * Php » $tpl->Set("variavel", "olá mundo")
-	 * Html » {%variavel%}
+	 * Php ï¿½ $tpl->Set("variavel", "olï¿½ mundo")
+	 * Html ï¿½ {%variavel%}
 	 */
     function mSet($var, $value){
     	$this->$var = $value;
     }
 	
 	/**
-	 * Mostra a página, pode conter ou não incíos
-	 * @param string $indent » Identificação (<!-- %inicio% -->)
-	 * @param string $tipo » se == 1 ele retorna o template senão imprimi na tela
+	 * Mostra a pï¿½gina, pode conter ou nï¿½o incï¿½os
+	 * @param string $indent ï¿½ Identificaï¿½ï¿½o (<!-- %inicio% -->)
+	 * @param string $tipo ï¿½ se == 1 ele retorna o template senï¿½o imprimi na tela
 	 * 
 	 * Modo de Usar:
 	 * $tpl->Show();
-	 * $tpl->Show("marcação");
+	 * $tpl->Show("marcaï¿½ï¿½o");
 	 */
     function mShow ($ident="", $tipo=""){
 		

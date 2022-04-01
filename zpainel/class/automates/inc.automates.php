@@ -1,40 +1,40 @@
 <?
 /**
- * Classe de administração e interação com banco de dados a partir de uma tabela base
+ * Classe de administraï¿½ï¿½o e interaï¿½ï¿½o com banco de dados a partir de uma tabela base
  * 
  * <i>Criada em: 23/01/2009
- * Última Alteração: 17/02/2010</i>
+ * ï¿½ltima Alteraï¿½ï¿½o: 17/02/2010</i>
  * 
- * @author Eduardo Firmino Leitão
+ * @author Eduardo Firmino Leitï¿½o
  * @version 1.7.9
- * @copyright Copyright © 2009, Eduardo Firmino Leitão = www.eduardofirmino.com
+ * @copyright Copyright ï¿½ 2009, Eduardo Firmino Leitï¿½o = www.eduardofirmino.com
  * @package Class
  */
 class cAutomates {
 
 	/**
- 	 * Variável de nome da tabela base
+ 	 * Variï¿½vel de nome da tabela base
  	*/
 	private $v_tabelaBase;
 	
 	/**
- 	 * Variável do objeto de conexão com o banco de dados
+ 	 * Variï¿½vel do objeto de conexï¿½o com o banco de dados
  	*/
 	private $cCon;
 	
 	/**
- 	 * Variável para guardar a paginação caso queira mostrar
+ 	 * Variï¿½vel para guardar a paginaï¿½ï¿½o caso queira mostrar
  	*/
 	public $v_paginacao;
 	
 	/**
- 	 * Variável para guardar o caminho dos arquivos de upload
+ 	 * Variï¿½vel para guardar o caminho dos arquivos de upload
  	*/
 	public $v_caminho_imagem = "../../fotos/";
 	
 	/**
-	 * Método Construtor que seta a tabela base
-	 * @param String $tabelaBase » Tabela base a qual quer trabalhar
+	 * Mï¿½todo Construtor que seta a tabela base
+	 * @param String $tabelaBase ï¿½ Tabela base a qual quer trabalhar
 	*/
 	function __construct($tabelaBase="") {
 		$this->cCon = new cConexao;
@@ -48,8 +48,8 @@ class cAutomates {
 	}
 	
 	/**
-	 * Método para retornar informações do comentário da tabela base
-	 * @return Array $result » Informações da tabela
+	 * Mï¿½todo para retornar informaï¿½ï¿½es do comentï¿½rio da tabela base
+	 * @return Array $result ï¿½ Informaï¿½ï¿½es da tabela
 	*/
 	function mRetornaInfTabela() {
 		$consultaInfTabela = $this->cCon->mQuery("SHOW TABLE STATUS LIKE '".$this->v_tabelaBase."'");
@@ -91,13 +91,14 @@ class cAutomates {
 	}
 	
 	/**
-	 * Método para retornar um ou mais campos da tabela base
-	 * @param String $nmCampo » Campo que quiser obter detalhes (opcional)
-	 * @return Array $result » Dados consultados
+	 * Mï¿½todo para retornar um ou mais campos da tabela base
+	 * @param String $nmCampo ï¿½ Campo que quiser obter detalhes (opcional)
+	 * @return Array $result ï¿½ Dados consultados
 	*/
 	function mRetornaCampos($nmCampo="") {
+        $consultaInfCamposLike ='';
 		if ($nmCampo) $consultaInfCamposLike = "LIKE '".$nmCampo."'";
-		
+
 		$result = array();
 		$i = 0;
 		$consultaInfCampos = $this->cCon->mQuery("SHOW FULL COLUMNS FROM ".$this->v_tabelaBase." $consultaInfCamposLike");
@@ -167,12 +168,12 @@ class cAutomates {
 	}
 	
 	/**
-	 * Método para retornar dados da tabela base
-	 * @param int $codigo » Código do cadastro que queira buscar os dados (opcional)
-	 * @param String $where » Opções de where no sql de consulta
-	 * @param String $order » Opções de order no sql de consulta
-	 * @param String $order » Opções de limit no sql de consulta
-	 * @return Array $result » Dados consultados
+	 * Mï¿½todo para retornar dados da tabela base
+	 * @param int $codigo ï¿½ Cï¿½digo do cadastro que queira buscar os dados (opcional)
+	 * @param String $where ï¿½ Opï¿½ï¿½es de where no sql de consulta
+	 * @param String $order ï¿½ Opï¿½ï¿½es de order no sql de consulta
+	 * @param String $order ï¿½ Opï¿½ï¿½es de limit no sql de consulta
+	 * @return Array $result ï¿½ Dados consultados
 	*/
 	function mRetornaDados($codigo="",$where="",$order="",$limit="") {
 		$campos = $this->mRetornaCampos();
@@ -227,10 +228,10 @@ class cAutomates {
 	}
 	
 	/**
-	 * Método para atualizar dados como cadastrar e modificar
-	 * @param Array $dados » Dados para atualizar no banco
-	 * @param int $codigo » Código do cadastro caso queira modificar (opcional)
-	 * @param String $where » Opções de where no sql
+	 * Mï¿½todo para atualizar dados como cadastrar e modificar
+	 * @param Array $dados ï¿½ Dados para atualizar no banco
+	 * @param int $codigo ï¿½ Cï¿½digo do cadastro caso queira modificar (opcional)
+	 * @param String $where ï¿½ Opï¿½ï¿½es de where no sql
 	*/
 	function mAtualizaDados($dados="",$codigo="",$where="") {
 		if (empty($dados)) exit("Erro: Dados em branco");
@@ -269,9 +270,9 @@ class cAutomates {
 	}
 	
 	/**
-	 * Método para deletar dados da tabela base
-	 * @param int $codigo » Código do cadastro que queira deletar (opcional)
-	 * @param String $where » Opções de where no sql
+	 * Mï¿½todo para deletar dados da tabela base
+	 * @param int $codigo ï¿½ Cï¿½digo do cadastro que queira deletar (opcional)
+	 * @param String $where ï¿½ Opï¿½ï¿½es de where no sql
 	*/
 	function mDeletaDados($codigo="",$where="") {
 		if (($codigo) || ($where)) {
@@ -287,16 +288,16 @@ class cAutomates {
 			//delete
 			$this->cCon->mQuery("DELETE FROM ".$this->v_tabelaBase." $realWhere");
 		} else {
-			exit("Erro: Código ou condição em branco");
+			exit("Erro: Cï¿½digo ou condiï¿½ï¿½o em branco");
 		}
 	}
 	
 	/**
-	 * Método para converter datas
-	 * @param string $p_data » Data que deseja converter
-	 * @param int $p_tipo » 1 - Brasileira e 0 - Americana
-	 * @param int $p_hora» 1 - Tem Horas e 0 - Não tem
-	 * @return string » Data convertida 
+	 * Mï¿½todo para converter datas
+	 * @param string $p_data ï¿½ Data que deseja converter
+	 * @param int $p_tipo ï¿½ 1 - Brasileira e 0 - Americana
+	 * @param int $p_horaï¿½ 1 - Tem Horas e 0 - Nï¿½o tem
+	 * @return string ï¿½ Data convertida 
 	*/
 	function mConverteData($p_data, $p_tipo, $p_hora=0){
 	 	if($p_hora == 0) {
@@ -309,8 +310,8 @@ class cAutomates {
 	
 	/**
  	 * Trata campos de valores de moeda, retirando os "."
- 	 * @param string $p_valor » Valor no formato 10.000,00
- 	 * @return string » Formatada cadastrar no banco de dados
+ 	 * @param string $p_valor ï¿½ Valor no formato 10.000,00
+ 	 * @return string ï¿½ Formatada cadastrar no banco de dados
  	 */
 	function mTrataMoeda($p_valor) {
 		$p_valor = str_replace(".", "", $p_valor);
@@ -320,11 +321,11 @@ class cAutomates {
 	}
 	
 	/**
- 	 * Trata descrição colocando ... (tres pontos) ou não
- 	 * @param string $p_descricao » Descricao
-	 * @param int $p_qtd » Quantidade permitida de caracteres
-	 * @param int $p_tags » 0 = retira as tags html, 1 = deixa com tags html
- 	 * @return string » Tratada p/ aparecer no site
+ 	 * Trata descriï¿½ï¿½o colocando ... (tres pontos) ou nï¿½o
+ 	 * @param string $p_descricao ï¿½ Descricao
+	 * @param int $p_qtd ï¿½ Quantidade permitida de caracteres
+	 * @param int $p_tags ï¿½ 0 = retira as tags html, 1 = deixa com tags html
+ 	 * @return string ï¿½ Tratada p/ aparecer no site
  	 */
 	function mBreveDescricao($p_descricao, $p_qtd, $p_tags=0) {
 		if (strlen($p_descricao) > $p_qtd) {
@@ -339,16 +340,16 @@ class cAutomates {
 	}
 	
 	/**
-	 * Método para gerar paginação de resultados
-	 * @param int $pagina » Número da página atual
-	 * @param int $resultadosPagina » Número de resultados por página
-	 * @param int $totalResultados » Total de resultados da consulta
-	 * @param string $link » Link para a paginação
-	 * @param int $nrPaginas » Número de páginas pra fazer a paginação
-	 * @return string » Limits da query de consulta
+	 * Mï¿½todo para gerar paginaï¿½ï¿½o de resultados
+	 * @param int $pagina ï¿½ Nï¿½mero da pï¿½gina atual
+	 * @param int $resultadosPagina ï¿½ Nï¿½mero de resultados por pï¿½gina
+	 * @param int $totalResultados ï¿½ Total de resultados da consulta
+	 * @param string $link ï¿½ Link para a paginaï¿½ï¿½o
+	 * @param int $nrPaginas ï¿½ Nï¿½mero de pï¿½ginas pra fazer a paginaï¿½ï¿½o
+	 * @return string ï¿½ Limits da query de consulta
 	*/
 	public function mPaginacao($pagina=0,$resultadosPagina=10,$totalResultados=0,$link="",$nrPaginas=5){
-		if ($totalResultados > $resultadosPagina) $s_msg   = "Páginas:";
+		if ($totalResultados > $resultadosPagina) $s_msg   = "Pï¿½ginas:";
 		
 		$s_resultados = intval($totalResultados / $resultadosPagina);
 		$s_resultados = (($totalResultados / $resultadosPagina) == $s_resultados) ? $s_resultados = $s_resultados - 1 : $s_resultados;
@@ -358,7 +359,7 @@ class cAutomates {
 
 		$s_msg .= $pagina > 0 ? "<a href=\"".$link.($pagina-1)."\">Anterior</a>" : "";
 		for($i = $inicio; $i <= $s_final; $i++) $s_msg .= $i == $pagina ? ($totalResultados > $resultadosPagina ? " <span>".($i+1)."</span>" : "") : " <a href=\"".$link.$i."\">".($i+1)."</a>";
-		$s_msg .= ($pagina+1) <= $s_resultados ? " <a href=\"".$link.($pagina+1)."\">Próxima</a>" : "";
+		$s_msg .= ($pagina+1) <= $s_resultados ? " <a href=\"".$link.($pagina+1)."\">Prï¿½xima</a>" : "";
 		$this->v_paginacao = $s_msg;
 		
 		return ($pagina*$resultadosPagina).",".$resultadosPagina;
@@ -366,7 +367,7 @@ class cAutomates {
 	
 	
 	/**
-	 * Variáveis extras para administração
+	 * Variï¿½veis extras para administraï¿½ï¿½o
 	*/
 	public $v_tabela_comment;		//define o comment da tabela em tempo real
 	public $v_title_alternativo;	//titulo alternativo para aparecer em baixo do titulo do sistema
@@ -374,20 +375,20 @@ class cAutomates {
 	public $v_sql_order_manage;		//sql alternativo de order para manage do sistema
 	public $v_campo_title_before;	//define um title antes de determinado campo (array)
 	public $v_campo_comment;		//define o comment de determinado campo em tempo real (array)
-	public $v_campo_padrao;			//define um campo com valor padrão (array)
+	public $v_campo_padrao;			//define um campo com valor padrï¿½o (array)
 	public $v_campo_exemplo;		//define um exemplo para determinado campo (array)
-	public $v_html_extra_p;			//define um html extra ao p em determinado campo que são os itens de cadastro do sistema (array)
-	public $v_html_extra_campo;		//define um html extra a um determinado campo que são os itens de cadastro do sistema (array)
-	public $v_html_extra_admin;		//adiciona um html extra ao lado dos botões no link de admin (principal)
-	public $v_html_extra_insert;	//adiciona um html extra ao lado dos botões no link de cadastro
-	public $v_html_extra_manage;	//adiciona um html extra ao lado dos botões no link de manage
-	public $v_html_extra_update;	//adiciona um html extra ao lado dos botões no link de edição
+	public $v_html_extra_p;			//define um html extra ao p em determinado campo que sï¿½o os itens de cadastro do sistema (array)
+	public $v_html_extra_campo;		//define um html extra a um determinado campo que sï¿½o os itens de cadastro do sistema (array)
+	public $v_html_extra_admin;		//adiciona um html extra ao lado dos botï¿½es no link de admin (principal)
+	public $v_html_extra_insert;	//adiciona um html extra ao lado dos botï¿½es no link de cadastro
+	public $v_html_extra_manage;	//adiciona um html extra ao lado dos botï¿½es no link de manage
+	public $v_html_extra_update;	//adiciona um html extra ao lado dos botï¿½es no link de ediï¿½ï¿½o
 	public $v_redireciona_cadastro;	//redireciona o cadastro para outro link (array) campo e link
-	public $v_redireciona_alteracao;//redireciona a alteração para outro link seguido das variáveis atuais
-	public $v_tabela_backup;		//seta uma tabela de backup para guardar dados em segurança
+	public $v_redireciona_alteracao;//redireciona a alteraï¿½ï¿½o para outro link seguido das variï¿½veis atuais
+	public $v_tabela_backup;		//seta uma tabela de backup para guardar dados em seguranï¿½a
 	
 	/**
-	 * Método para iniciar a administração da tabela base
+	 * Mï¿½todo para iniciar a administraï¿½ï¿½o da tabela base
 	*/
 	function mAdmin() {
 		include "../class/automates/admin/inc.automates-admin.php";

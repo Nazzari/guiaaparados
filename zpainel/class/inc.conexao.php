@@ -3,25 +3,25 @@
 include "inc.erros.php";
 
 /**
- * Classe de conexão e manipulação do Banco de Dados
+ * Classe de conexï¿½o e manipulaï¿½ï¿½o do Banco de Dados
  * 
  * <i>Criada em: 05/08/2006
- * Última Alteração: 05/10/2006</i>
+ * ï¿½ltima Alteraï¿½ï¿½o: 05/10/2006</i>
  * 
  * @author Zaib Tecnologia
  * @version 1.0
- * @copyright Copyright © 2006, Zaib Tecnologia
+ * @copyright Copyright ï¿½ 2006, Zaib Tecnologia
  * @package Class
  */
 class cConexao extends cErros {
  	
  	/**
- 	 * Variável que detem a conexão (id)
+ 	 * Variï¿½vel que detem a conexï¿½o (id)
  	 */
  	private $v_con;
  	
  	/**
- 	 * Variavel que mantem a seleção do banco de dados
+ 	 * Variavel que mantem a seleï¿½ï¿½o do banco de dados
  	 */
  	private $v_sel_banco;
  	
@@ -31,7 +31,7 @@ class cConexao extends cErros {
  	private $v_servidor;
  	
  	/**
- 	 * Usuário do banco de dados
+ 	 * Usuï¿½rio do banco de dados
  	 */
     private $v_usuario;
     
@@ -46,7 +46,7 @@ class cConexao extends cErros {
     private $v_db;
     
     /**
-     * Mantem a Ultima query para maiores informações como
+     * Mantem a Ultima query para maiores informaï¿½ï¿½es como
      * numero de linhas rerotnadas
      */
     private $v_ultima_query;
@@ -57,17 +57,17 @@ class cConexao extends cErros {
     private $v_clausula_sql;
     
     /**
-     * Exclusivo p/ mater sql de alterações de cliente
+     * Exclusivo p/ mater sql de alteraï¿½ï¿½es de cliente
      */
     public $v_sql_manipula;
     
 	/**
-	 * Método Construtor que inicia a conexão
-	 * com o banco de dados e seta também.
-	 * @param $host » Host do servidor
-	 * @param $user » User do banco
-	 * @param $pass » Senha do banco
-	 * @param $db   » Banco de dados a ser selecionado
+	 * Mï¿½todo Construtor que inicia a conexï¿½o
+	 * com o banco de dados e seta tambï¿½m.
+	 * @param $host ï¿½ Host do servidor
+	 * @param $user ï¿½ User do banco
+	 * @param $pass ï¿½ Senha do banco
+	 * @param $db   ï¿½ Banco de dados a ser selecionado
 	 */
     function __construct($p_host="mysql.guiaaparadosdaserra.com.br", $p_user="guiaaparadosda", $p_pass="gu123654789", $p_db="guiaaparadosda") {
 		
@@ -80,17 +80,17 @@ class cConexao extends cErros {
 	}
 	
 	/**
-	 * Efetua conexão com o banco de dados
+	 * Efetua conexï¿½o com o banco de dados
 	 */
 	private function mConecta() {
 		
-		// Estabelece conexão com o banco de dados
-		$this->v_con = @mysql_connect($this->v_servidor, $this->v_usuario, $this->v_senha);
+		// Estabelece conexï¿½o com o banco de dados
+		$this->v_con = mysqli_connect($this->v_servidor, $this->v_usuario, $this->v_senha);
 		
 		// Em caso de erro, seta mensagem de erro
 		if(!$this->v_con) { 
 			$this->v_msg_erro  = mysql_errno()." - ".mysql_error();
-			$this->v_tipo      = "Conexão com Banco de Dados";
+			$this->v_tipo      = "Conexï¿½o com Banco de Dados";
 			$this->v_endereco  = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"];
 			$this->mExibeMsgErro();
 		}else{
@@ -101,14 +101,22 @@ class cConexao extends cErros {
 	/**
 	 * Seleciona o banco de dados desejado
 	 */
-	private function mSelecionaBanco() {
-		// Seleciona banco de dados
-        $this->v_sel_banco = @mysql_select_db($this->v_db, $this->v_con);
-        
+	private function mSelecionaBanco()
+    {
+        // Seleciona banco de dados
+        try {
+            $this->v_sel_banco = mysqli_select_db($this->v_con, $this->v_db);
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
+            }
         // Em caso de erro, seta mensagem de erro
-        if(!$this->v_sel_banco) { 
-			$this->v_msg_erro  = mysql_errno()." - ".mysql_error();
-			$this->v_tipo     = "Seleção do Banco de Dados";
+        if(!$this->v_sel_banco) {
+            echo mysqli_errno();
+            die('fim');
+
+
+			$this->v_msg_erro  = mysqli_errno()." - ".mysqli_error();
+			$this->v_tipo     = "Seleï¿½ï¿½o do Banco de Dados";
 			$this->v_endereco = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"];
 			$this->mExibeMsgErro();
 		}
@@ -116,17 +124,17 @@ class cConexao extends cErros {
 	
 	/**
 	 * Efetua a query no banco de dados.
-	 * @param string $sql » Comandos sql
-	 * @return stron $ultimaQuery » Ultima query executada
+	 * @param string $sql ï¿½ Comandos sql
+	 * @return stron $ultimaQuery ï¿½ Ultima query executada
 	 */
 	public function mQuery($p_query){
 		$this->v_ultimo_sql   = $p_query;
-		$this->v_ultima_query = @mysql_query($p_query);
+		$this->v_ultima_query = @mysqli_query($this->v_con,$p_query);
 		
 		// Em caso de erro, seta mensagem de erro
 		if(!$this->v_ultima_query) {
-			$this->v_msg_erro  = mysql_errno()." - ".mysql_error();
-			$this->v_tipo     = "Erro de Manipulação de Dados (Sql)";
+			$this->v_msg_erro  = mysqli_errno()." - ".mysqli_error();
+			$this->v_tipo     = "Erro de Manipulaï¿½ï¿½o de Dados (Sql)";
 			$this->v_endereco = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"];
 			$this->mExibeMsgErro();
 		}
@@ -136,8 +144,8 @@ class cConexao extends cErros {
 	
 	/**
 	 * Retorna o total de linhas
-	 * @param string $query » Sql
-	 * @return string rows » Número de Linhas
+	 * @param string $query ï¿½ Sql
+	 * @return string rows ï¿½ Nï¿½mero de Linhas
 	 */
 	public function mRows($p_query = "") {
 		$s_consulta = !empty($p_query) ? $p_query : $this->v_ultima_query;
@@ -147,18 +155,18 @@ class cConexao extends cErros {
 	/**
 	 * Seta a consulta como objeto
 	 * @param string $consulta
-	 * @return object » Retorna consulta como um objeto 
+	 * @return object ï¿½ Retorna consulta como um objeto 
 	 */
 	public function mFetchObject($p_consulta = "") { 
 		$p_consulta = !empty($p_consulta) ? $p_consulta : $this->v_ultima_query;
-		$s_object = @mysql_fetch_object($p_consulta);
+		$s_object = @mysqli_fetch_object($p_consulta);
 		return $s_object;
 	}
 	
 	/**
 	 * Seta a consulta como um array
-	 * @param string $consulta » Sql
-	 * @return array » Retorna como array
+	 * @param string $consulta ï¿½ Sql
+	 * @return array ï¿½ Retorna como array
 	 */
 	public function mFetchArray($p_consulta = "") { 
 		$p_consulta = !empty($p_consulta) ? $p_consulta : $this->v_ultima_query;
@@ -167,18 +175,18 @@ class cConexao extends cErros {
 	}
 	
 	/**
-	 * Fecha conexão com o Banco de Dados
+	 * Fecha conexï¿½o com o Banco de Dados
 	 */
 	public function mClose() {
 		@mysql_close($this->v_con);
 	}
 	
 	/**
-    * Cria cláusulas SQL INSERT
-    * @param string $tabela » Nome da Tabela
-    * @param array $campos » Campos a serem incluidos
-    * @param array $valores » Valores a serem incluidos
-    * @return strong » Sql formado
+    * Cria clï¿½usulas SQL INSERT
+    * @param string $tabela ï¿½ Nome da Tabela
+    * @param array $campos ï¿½ Campos a serem incluidos
+    * @param array $valores ï¿½ Valores a serem incluidos
+    * @return strong ï¿½ Sql formado
     */
     public function mGeraInsert($p_tabela, $p_campos, $p_valores) {
         $this->v_clausula_sql = "INSERT INTO " . $p_tabela . " (";
@@ -208,12 +216,12 @@ class cConexao extends cErros {
     }
     
     /**
-    * Cria cláusulas SQL UPDATE
-    * @param string $tabela » Nome da Tabela
-    * @param array $campos » Campos a serem incluidos
-    * @param array $valores » Valores a serem incluidos
-    * @param string $sentenca » Condição que satisfaz
-    * @return string » Sql formada
+    * Cria clï¿½usulas SQL UPDATE
+    * @param string $tabela ï¿½ Nome da Tabela
+    * @param array $campos ï¿½ Campos a serem incluidos
+    * @param array $valores ï¿½ Valores a serem incluidos
+    * @param string $sentenca ï¿½ Condiï¿½ï¿½o que satisfaz
+    * @return string ï¿½ Sql formada
     */
     public function mGeraUpdate($p_tabela, $p_campos, $p_valores, $p_sentenca) {
         $this->v_clausula_sql = "UPDATE " . $p_tabela . " SET ";
@@ -234,10 +242,10 @@ class cConexao extends cErros {
 
     /**
     * Retorna um valor formatado para se inserir na query SQL
-    * @param string $valor » Valores vindos do array de valores
-    * @param int $atual » Campo o qual deve ser inserido o valor
-    * @param int $total » Total de Campos
-    * @return string » Junção dos campos do Sql (valores)
+    * @param string $valor ï¿½ Valores vindos do array de valores
+    * @param int $atual ï¿½ Campo o qual deve ser inserido o valor
+    * @param int $total ï¿½ Total de Campos
+    * @return string ï¿½ Junï¿½ï¿½o dos campos do Sql (valores)
     */
     private function mEscreveValor($p_valor, $p_atual, $p_total) {
         if (is_string($p_valor)) {
@@ -256,9 +264,9 @@ class cConexao extends cErros {
     }
     
     /**
-    * Cria cláusulas SQL DELETE
-    * @param string $tabela » Nome da Tabela
-    * @param string $sentenca » Condição que satusfaz
+    * Cria clï¿½usulas SQL DELETE
+    * @param string $tabela ï¿½ Nome da Tabela
+    * @param string $sentenca ï¿½ Condiï¿½ï¿½o que satusfaz
     */
     public function mGeraDelete($p_tabela, $p_sentenca) {
         $this->v_clausula_sql = "DELETE FROM " . $p_tabela;
