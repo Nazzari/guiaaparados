@@ -1,0 +1,109 @@
+<!-- %inicio% -->	
+	<script type="text/javascript" src="/jscript/jquery2.js"></script>
+	<script type="text/javascript" src="/jscript/jquery.validate.js"></script>
+	<script type="text/javascript">
+		// jQuery(document).ready(function() {
+		// 	jQuery('#formPropostas').validate();
+		// });
+	</script>
+	<!--<script type="text/javascript" src="/jscript/mascaras.js"></script>-->
+	
+	<script type="text/javascript" src="/js/jquery.maskedinput.js"></script>
+	
+ 	<script type="text/javascript">
+
+            jQuery( function($){
+
+                 $("#telefone").mask("(99) 9 9999-9999");
+                 $("#telefone2").mask("(99) 9999-9999");
+                 
+            });
+
+    </script>
+
+
+<div class="capa-interna">
+	<img src="/img/fundo-internas.jpg">
+
+	<div class="container">
+		<h2>Fale Conosco</h2>
+	</div>
+</div>
+<br>
+<div class="conteudo-interna">
+	<div class="container">
+		<div class="col-md-6">
+			<br>
+			<p>	{%rodape%}
+
+			</p>
+			
+			<br>
+<!-- 			<p>Escolha outro Serviço que você deseja</p>
+			<br>
+			<a target="blank" href="http://adventure.guiaaparadosdaserra.com.br/contato">Guia Aparados - Ecoturismo e Aventura</a>
+			<br>
+			<a target="blank" href="http://cavalgada.guiaaparadosdaserra.com.br/contato">Fazenda Santana - Turismo Equestre</a> -->
+		</div>
+		<div class="col-md-6">
+			<div class="formulario-contato">
+
+
+				<form action="/fale-conosco/enviar" class="formulario" id="formPropostas" method="post"> 
+					<input placeholder="Nome" type="text" class="inputComum required" id="nome" name="nome" />
+					<br>
+					<input placeholder="E-mail" type="text" class="inputComum required" id="email" name="email" />
+					<br>
+					<!-- <input placeholder="Telefone" type="text" class="inputComum telefone" id="telefone" name="telefone" onkeypress="mMascarasJS('TELEFONE', this.id); return(mCampoNumerico(this, event));" maxlength="14" /> -->
+					<input placeholder="Telefone" type="text" class="inputComum telefone" id="telefone" name="telefone"/>
+					<br>
+					<input placeholder="Cidade" type="text" class="inputComum cidade" id="cidade" name="cidade" />
+					<br>
+					<p>UF:</p>
+					<select class="selectUF" id="uf" name="uf">
+						<option>AC</option>
+						<option>AL</option>
+						<option>AP</option>
+						<option>AM</option>
+						<option>BA</option>
+						<option>CE</option>
+						<option>DF</option>
+						<option>ES</option>
+						<option>GO</option>
+						<option>MA</option>
+						<option>MT</option>
+						<option>MS</option>
+						<option>MG</option>
+						<option>PA</option>
+						<option>PB</option>
+						<option>PR</option>
+						<option>PE</option>
+						<option>PI</option>
+						<option>RJ</option>
+						<option>RN</option>
+						<option>RS</option>
+						<option>RO</option>
+						<option>RR</option>
+						<option selected="selected">SC</option>
+						<option>SP</option>
+						<option>SE</option>
+						<option>TO</option>
+					</select>
+					<p>Assunto:</p>
+					<select class="selectUF" id="assunto" name="assunto">
+						<option select="selected">Guia Impresso</option>
+						<option>Anúncio</option>
+						<option>Outros</option>
+					</select>
+
+					<textarea placeholder="Mensagem" class="textArea required" id="mensagem" name="mensagem" rows="1" cols="1"></textArea>
+					<br><br>
+					<input type="image" src="/imagens/btEnviar.png" alt="Enviar" title="Enviar" class="btEnviar"/>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<br><br>
+

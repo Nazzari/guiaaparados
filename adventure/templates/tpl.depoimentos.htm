@@ -1,0 +1,106 @@
+<!-- %inicio% -->
+  <script type="text/javascript" src="/jscript/jquery2.js"></script>
+  <script type="text/javascript" src="/jscript/jquery.validate.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery('#formPropostas').validate();
+    });
+  </script>
+  <script type="text/javascript" src="/jscript/mascaras.js"></script>
+<br>
+<br>
+
+<div class="container">
+
+  <div class="titulo-pacotes-passeios">
+    <h3 class="title-interna">DEPOIMENTOS</h3>
+  </div>
+  <br>
+
+  <div class="interna-conteudo">
+
+<!-- %depoimentos% -->
+    <div class="conteudo-depoimentos">
+      <h4>{%nome%}</h4>
+      <h5>{%cidade%} - {%estado%}</h5>
+      <p>{%texto%}</p>
+    </div>
+    <hr>
+<!-- %fim_depoimentos% -->
+  
+    <br/>
+    <div class="agrupaGaleriaInterna">
+            
+              <div class="agrupaFormulario">
+                <div class="tituloInterna tituloDepoimentos">Deixe aqui seu Depoimento</div>
+                <form action="/depoimentos/enviar" class="formulario" id="formPropostas" method="post"> 
+                  <div class="linhaForm">
+                    <label class="labelComum" for="nome">
+                      <p>Nome:</p>
+                    </label>
+                    <input type="text" class="inputComum required" id="nome" name="nome" />
+                  </div>
+                  <div class="linhaForm">
+                    <label class="labelComum" for="email">
+                      <p>E-mail:</p>
+                    </label>
+                    <input type="text" class="inputComum required" id="email" name="email" />
+                  </div>
+
+                  <div class="linhaForm">
+                    <label class="labelComum" for="cidade">
+                      <p>Cidade:</p>
+                    </label>
+                    <input type="text" class="inputComum cidade" id="cidade" name="cidade" />
+                    <label class="labelComum uf" for="uf">
+                      <p>UF:</p>
+                    </label>
+                    <select class="selectUF" id="uf" name="uf">
+                      <option>AC</option>
+                      <option>AL</option>
+                      <option>AP</option>
+                      <option>AM</option>
+                      <option>BA</option>
+                      <option>CE</option>
+                      <option>DF</option>
+                      <option>ES</option>
+                      <option>GO</option>
+                      <option>MA</option>
+                      <option>MT</option>
+                      <option>MS</option>
+                      <option>MG</option>
+                      <option>PA</option>
+                      <option>PB</option>
+                      <option>PR</option>
+                      <option>PE</option>
+                      <option>PI</option>
+                      <option>RJ</option>
+                      <option>RN</option>
+                      <option>RS</option>
+                      <option>RO</option>
+                      <option>RR</option>
+                      <option selected="selected">SC</option>
+                      <option>SP</option>
+                      <option>SE</option>
+                      <option>TO</option>
+                    </select>
+                  </div>
+                  
+                  <div class="linhaForm">
+                    <label class="labelComum" for="mensagem">
+                      <p>Mensagem:</p>
+                    </label>
+                    <textarea class="textArea required" id="mensagem" name="mensagem" rows="1" cols="1"></textArea>
+                  </div>
+                  <input type="submit" alt="Enviar" title="Enviar" class="btEnviar"/>
+                </form>
+              </div>    
+            </div>  
+
+  </div>  
+
+
+</div>
+
+<br>
+<br>

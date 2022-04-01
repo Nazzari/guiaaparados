@@ -1,0 +1,70 @@
+<!-- %inicio% -->
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>{%title%}</title>
+	<link rel="stylesheet" type="text/css" href="../class/automates/css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="../class/automates/css/thickbox.css" />
+	<style type="text/css">
+		#FlashFilesUpload {
+			border: 6px solid #FFCE09;
+                        display: block;
+		}
+	</style>
+</head>
+<body>
+<form class="cmxform" name="ajax_image" id="ajax_image" onsubmit="return false;" enctype="multipart/form-data">
+	<fieldset>
+		<div class="titulosSistemas"><a href="?" title="{%title%}">{%title%}</a>  <a href="?action=manage&palavra={%palavraRedir%}&pagina={%paginaRedir%}" title="Gerenciar">Gerenciar</a>  <a href="?action=update&codigo={%codigoRedir%}&palavra={%palavraRedir%}&pagina={%paginaRedir%}" title="Editar">Editar</a>  Cadastrar {%relationTitle%}</div>
+		<p>
+			<input type="file" name="name" class="name" placeholder="Fotos" multiple /><br/><br/>
+		</p>
+		<input type="hidden" name="codigo" value="{%codigoRedir%}">
+		<input type="hidden" name="tabela" value="{%tabela%}">
+		<input type="hidden" name="campoRelacao" value="{%campoRelacao%}">
+		<input type="hidden" name="campoArquivo" value="{%campoArquivo%}">
+		<input type="hidden" name="caminho" value="{%caminho%}">
+		<p>
+			<input type="submit" value="Enviar Fotos" name="submit" id="upload" class="upload"/>
+			<input type="button" value="Voltar" onclick="window.location = '?action=update&codigo={%codigoRedir%}&palavra={%palavraRedir%}&pagina={%paginaRedir%}'" />
+		</p>
+	</fieldset>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+    $("#ajax_image").submit(function (event) {
+        var data = new FormData();
+
+        event.preventDefault();
+
+        $.each($(".name")[0].files, function (key, file){
+            data.append(key, file);
+        });  
+
+        $.each($('#ajax_image').serializeArray(), function (i, obj) {
+            data.append(obj.name, obj.value)
+        });
+
+        $.ajax({
+            url: "/zpainel2/class/automates/jscript/MultiPowUpload/uploadfiles.php",
+            type: "POST",
+            data: data,
+            processData: false,
+            contentType: false,
+            success: function () {
+				console.log(data);
+				alert('Fotos enviadas com Sucesso!');
+				location.assign('?action=manageArquivos&codigo={%codigoRedir%}&palavra={%palavraRedir%}&pagina={%paginaRedir%}');
+            },
+            error: function () {
+                alert("error in ajax form submission");
+            }
+         });
+    });
+});
+</script>
+</body>
+</html>

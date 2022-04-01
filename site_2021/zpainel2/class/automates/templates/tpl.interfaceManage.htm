@@ -1,0 +1,118 @@
+<!-- %inicio% -->
+<!-- <?xml version="1.0" encoding="ISO-8859-1" ?> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>{%title%}</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../class/automates/css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="../class/automates/css/thickbox.css" />
+	<script type="text/javascript" src="../class/automates/jscript/jquery.js"></script>
+	<script type="text/javascript" src="../class/automates/jscript/thickbox.js"></script>
+	<script type="text/javascript" src="../class/automates/jscript/mascaras.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var p = 0;
+			$("#tabelaLista tr:first").hover(function() {p=1;}, function() {p=0;});
+			
+			$("#tabelaLista tr").hover(function() {
+				if (p==0) $(this).addClass("mouseOverLista");
+			}, function() {
+				$(this).removeClass("mouseOverLista");
+			});
+		});
+		function mEnvia() {
+			if (mConfirmaExcluir('selecionados[]')) {
+				document.getElementById("bt1").disabled = true;
+				document.getElementById("bt2").disabled = true;
+				document.getElementById("bt3").disabled = true;
+				document.getElementById("bt4").disabled = true;
+				tb_show("", "carregandoFalso.jpg", false);
+				return true;
+			} else {
+				return false;
+			}
+		}
+		function mBusca() {
+			document.getElementById("bt1").disabled = true;
+			document.getElementById("bt2").disabled = true;
+			document.getElementById("bt3").disabled = true;
+			document.getElementById("bt4").disabled = true;
+			tb_show("", "carregandoFalso.jpg", false);
+			return true;
+		}
+		function mListaTodos() {
+			document.getElementById("bt1").disabled = true;
+			document.getElementById("bt2").disabled = true;
+			document.getElementById("bt3").disabled = true;
+			document.getElementById("bt4").disabled = true;
+			tb_show("", "carregandoFalso.jpg", false);
+			window.location = '?action=manage';
+		}
+	</script>
+</head>
+<body style="background-image: none; background-color: #e9ecef;">
+<div class="" style="padding-top: 2%; padding-left: 2%; padding-right: 2%">
+<form id="formInsert" method="get" onsubmit="return mBusca();">
+  <input type="hidden" name="action" value="manage" />
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="?" title="{%title%}">{%title%}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Gerenciar</li>
+      {%title_alternativo%}
+    </ol>
+  </nav>
+<!-- %mensagemSucesso% -->
+  <p id="manSucesso" style="background: none; background-color: #FFD7D7; color: red; border: 1px dotted red; margin-top: 10px; margin-bottom: 10px;">
+    <strong>Cadastro(s) excluído(s) com sucesso!</strong> <a href="javascript:;" style="color: red; font-size: 12px;" onclick="document.getElementById('manSucesso').style.display='none';">(ocultar mensagem)</a>
+  </p>
+<!-- %continua% -->
+  <p style="width: 96%;">
+    Total de <strong>{%totalResultados%}</strong> cadastro(s) encontrado(s).
+  </p>
+  <div class="form-row">
+    <div class="col-5">
+      <input name="palavra" id="palavra" type="text" size="35" value="{%palavra%}" class="form-control" placeholder="Busca">
+    </div>
+    <div class="col-3-last">
+      <button id="bt1" type="submit" value="Procurar" class="btn btn-primary">Procurar</button>
+    </div>
+    <div class="col-3">
+      <button id="bt4" type="button" value="Listar todos" onclick="mListaTodos();" class="btn btn-primary">Listar todos</button>
+    </div>
+  </div>
+</form>
+<hr>
+
+
+<!-- %fim% -->
+<form method="post" action="?action=manage&palavra={%palavraExcluir%}&pagina={%paginaExcluir%}&dados=true" onsubmit="return mEnvia();">
+  <table class="table" id="tabelaLista" width="99%">
+  <thead>
+  <tr bgcolor="#8db6de" height="26">
+			{%titulos%}
+		</tr>
+			{%dados%}
+  </thead>
+  <!-- <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    
+  </tbody> -->
+</table>
+<table width="99%">
+		<tr height="23">
+			<td class="paginacao">{%paginacao%}</td>
+			<td align="right"><button id="bt2" type="button" class="btn btn-secondary" value="Voltar" onclick="window.location = '?'" />Voltar</button> {%botaoExcluir%}</td>
+		</tr>
+	</table>
+</form>
+<br>
+</div>
+</body>
+</html>

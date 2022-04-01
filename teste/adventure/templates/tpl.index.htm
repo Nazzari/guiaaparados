@@ -1,0 +1,178 @@
+<!-- %inicio% -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>{%titulo_site_config%}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Content-Language" content="pt-br" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store" />
+		<meta http-equiv="Pragma" content="no-cache, no-store" />
+		<meta name="description" content="{%description_site_config%}" />
+		<meta name="keywords" content="{%keywords_site_config%}" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Zaib Tecnologia" />
+		{%webmasters_site_config%}
+		<link href="/css/estrutura.css" rel="stylesheet" type="text/css" />
+		<link href="/css/internasComuns.css" rel="stylesheet" type="text/css" />
+		<link href="/css/lightbox.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="/skins/tango/skin.css" />
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" />
+		
+		<script type="text/javascript" src="/jscript/flash.js"></script>  
+		<script type="text/javascript" src="/jscript/jquery.js"></script> 
+		<script type="text/javascript" src="/jscript/swfobject.js"></script>
+		<script type="text/javascript" src="/jscript/jquery.pngFix.js"></script>
+		
+		<script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+		
+		<script type="text/javascript" src="/js/ext-core-debug.js"></script>
+		<script type="text/javascript" src="/js/menu.js"></script>
+		
+		<script type="text/javascript" src="/jscript/jquery.lightbox.js"></script>
+        <script type="text/javascript" src="/jscript/lightbox.js"></script>
+		
+		<script type="text/javascript">
+
+		jQuery(document).ready(function() {
+		    jQuery('.agrupaSite').pngFix();
+		});
+		
+		</script>
+
+		<meta name="google-site-verification" content="ipHEUtslgltQgMQIbLCzSkL8w_J4Y1qQCoLWmvdbvpw" />
+		{%analytics_site_config%} 
+	</head> 
+	<body>
+		<div class="global">
+		<div class="agrupaSite">
+			<div class="agrupaTopo">
+				<a href="http://guiaaparadosdaserra.com.br/" class="linkLogo">
+					<img src="/imagens/logo.png" alt="" title="" />
+				</a>
+				<div class="agrupaLateralTopo right">
+					
+					<div class="agrupaBtTranslate">
+						<div id="google_translate_element"></div><script>
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({
+							    pageLanguage: 'pt',
+							    includedLanguages: 'es,en',
+							    autoDisplay: false,
+							    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+							  }, 'google_translate_element');
+							}
+							</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					</div>
+
+					<div class="agrupaBusca">
+						<form action="/formBusca/" method="GET">
+							<label class="labelBusca">
+								<img src="/imagens/tituloBusca.png"/>
+							</label>
+							<input type="text" name="key" class="inputBusca"/>
+							<input type="image" src="/imagens/btOk.png" class="botaoOk"/>
+						</form>
+					</div>
+				</div>
+				<div class="menu">
+					<a href="http://guiaaparadosdaserra.com.br/" class="menuPrincipalLink">
+						PÁGINA PRINCIPAL 
+					</a>
+					<a href="http://guiaaparadosdaserra.com.br/compre-o-guia-impresso" class="menuPrincipalLink">
+						COMPRE O GUIA IMPRESSO
+					</a>
+					<a href="http://guiaaparadosdaserra.com.br/parceiros" class="menuPrincipalLink">
+						PARCEIROS
+					</a>
+					<a href="http://guiaaparadosdaserra.com.br/anuncie" class="menuPrincipalLink">
+						ANUNCIE
+					</a>
+					<a href="http://guiaaparadosdaserra.com.br/quem-somos" class="menuPrincipalLink">
+						QUEM SOMOS
+					</a>
+					<a href="http://guiaaparadosdaserra.com.br/escolha-fale-conosco" class="menuPrincipalLinkSemBarra">
+						FALE CONOSCO
+					</a>
+				</div>
+			</div>
+			<div class="topoConteudo">
+				<a href="/">
+					<img src="/imagens/topoAdventureNovo4.jpg" alt="" class="name" />
+				</a>
+			</div>
+			<div class="conteudo">
+				<div class="destaqueConteudo" id="flashDestaque">
+					<script type="text/javascript">
+						var fo = new FlashObject("/imagens/flash/destaque.swf", "viewer", "608", "162", "8", "#FFFFFF");
+						fo.addParam("wmode", "transparent");
+						fo.addVariable("xmlURL", "/destaques-xml/");
+						fo.write("flashDestaque");
+					</script>
+				</div>
+				<div class="destaque2Conteudo">
+					{%ds_capa_texto%}
+				</div>
+			
+				
+				
+				<div class="principal">
+<!-- %fim% -->								
+				</div>
+				<div class="lateral">
+					<ul class="menuConteudo">
+						<li><span><a href="/">Home</a></span></li>
+						<li><span><a href="/contato">Contato</a></span></li>
+						<li><span><a href="/depoimentos">Depoimentos</a></span></li>
+						<li><span><a style="color: red;" href="/aventuras-personalizadas">Monte Seu Pacote</a></span></li>
+						<li><span><a style="color: red; font-size: 16px;" href="/pacotes">Pacotes</a></span></li>
+						<li><span><a style="color: red; font-size: 16px;" href="/passeios">Passeios</a></span></li>
+						<li><span><a href="/trekking">Trekking</a></span></li>
+						<li><span><a href="/mountain-bike">Mountain Bike</a></span></li>
+						<li><span><a href="/rapel">Rapel</a></span></li>
+						<li><span><a href="/canionismo">Canionismo</a></span></li>
+						<li><span><a href="/4x4">4x4</a></span></li>
+						<li><span><a href="/roteiro-familia">Roteiro Família</a></span></li>
+						<li><span><a href="/excursao-para-grupos">Excursão para grupos</a></span></li>
+						<li><span><a href="/nivel-das-atividades">Nível das atividades</a></span></li>
+						<li><span><a href="/informacoes">Política de Reservas / Info</a></span></li>
+						<li><span><a href="/guias">Guias</a></span></li>
+						<li><span><a href="/fotos">Fotos</a></span></li>						
+						<li><span><a href="/translado-transfer">Translado/Transfer</a></span></li>						
+						<li><span><a href="/passagens-aereas">Passagens Aéreas</a></span></li>						
+						<li><span><a href="/reportagens">Reportagens</a></span></li>						
+					</ul>
+					<img src="/imagens/bannerSegura.jpg" alt="" class="bannerSegura" />
+
+					<img src="/imagens/abeta.jpg" alt="" class="bannerSegura" />
+
+					<div style="margin-top:10px;"id="TA_selfserveprop416" class="TA_selfserveprop">
+					<ul id="4FZ5e741DP" class="TA_links 3EGm6Hdvmcr">
+					<li id="O6VnqRwpGjbz" class="N8EVcOxKDJ">
+					<a target="_blank" href="https://www.tripadvisor.com.br/"><img src="https://www.tripadvisor.com.br/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
+					</li>
+					</ul>
+					</div>
+					<script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=416&amp;locationId=8603632&amp;lang=pt&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"></script>
+
+
+					<a href="https://www.tripadvisor.com.br/Attraction_Review-g1205059-d8603632-Reviews-Guia_Aparados_da_Serra_Day_Tours-Cambara_do_Sul_State_of_Rio_Grande_do_Sul.html" target="blank">
+						<img src="/imagens/tripadvisor.jpg" alt="" class="bannerSegura" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="agrupaRodape">
+			<div class="conteudoRodape">
+		    	<img src="/imagens/bgTopRodape.jpg" alt="" title="" class="imagemBixos" />
+		    	<p class="descRodape">
+		    		Adventure Aparados - Guia Aparados da Serra - Aparados da Serra - Canyon Itaimbezinho - Pacotes Aparados da Serra - Passeios Aparados da Serra - Aventura Aparados da Serra - Trekking Aparados da Serra © 2010 - Todos os direitos reservados. 
+		    	</p>
+		    	<p class="agrupaZaib">
+		    		Desenvolvido por:<br/>
+		    		<a href="www.zaib.com.br" target="_blank">Zaib Tecnologia</a>	
+		    	</p>
+		    </div>
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- %inicio% -->
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        vertical: true,
+        scroll: 2
+    });
+});
+
+</script>
+					<div class="agrupaContInterna">
+						<div class="agrupaTituloInterna">
+							<p class="tituloInterna tituloAzul">Cavalgadas</p>
+						</div>
+<!-- %foto% -->
+						<div class="agrupaImgInterna">
+							<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+<!-- %while% -->
+								 <li>
+						    		<a href="/{%link%}" title="{%tt_foto%}" class="lightbox">
+										<img src="/{%foto%}" alt="" />
+									</a>	
+						    	</li>
+<!-- %fim_while% -->
+							</ul>
+							
+						</div>
+<!-- %fim% -->
+						<div class="agrupaTxtInterna" >
+							{%descricao%}
+						</div>
+					</div>	
+					
+					

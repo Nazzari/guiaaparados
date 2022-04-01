@@ -1,0 +1,411 @@
+/*!
+ * Ext Core Library $version&#xD;&#xA;http://extjs.com/&#xD;&#xA;Copyright(c) 2006-2009, $author.&#xD;&#xA;&#xD;&#xA;The MIT License&#xD;&#xA;&#xD;&#xA;Permission is hereby granted, free of charge, to any person obtaining a copy&#xD;&#xA;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xD;&#xA;in the Software without restriction, including without limitation the rights&#xD;&#xA;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xD;&#xA;copies of the Software, and to permit persons to whom the Software is&#xD;&#xA;furnished to do so, subject to the following conditions:&#xD;&#xA;&#xD;&#xA;The above copyright notice and this permission notice shall be included in&#xD;&#xA;all copies or substantial portions of the Software.&#xD;&#xA;&#xD;&#xA;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xD;&#xA;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xD;&#xA;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xD;&#xA;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xD;&#xA;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xD;&#xA;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN&#xD;&#xA;THE SOFTWARE.&#xD;&#xA;
+ */
+/*-- required & default rules --*/
+.ux-menu-container {
+    position: relative;
+}
+.ux-menu h1, h2, h3 { font-family: "Trebuchet MS",Verdana,Sans-Serif; }
+
+.ux-menu h2 {
+    font-size: 1.5em;
+    letter-spacing: 0.4pt;
+    text-transform: uppercase;
+    padding-top: 0.5em;
+    color: #1C417C;
+}
+
+.ux-menu h3 {
+    font-size: 1.0em;
+    letter-spacing: 0.2pt;
+    text-transform: uppercase;
+    padding-top: 0.5em;
+    color: #0464BB;
+        
+}
+
+.ux-menu a img{ border: none; }
+
+.ux-menu,
+.ux-menu ul {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
+}
+
+.ux-menu li {
+    position: relative;
+    float: left;
+}
+
+.ux-menu ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ext-border-box .ux-menu-ie-iframe,
+.ext-ie7 .ux-menu-ie-iframe {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    zoom: 1;
+    z-index: -1;
+    filter:mask();
+}
+
+.ux-menu-vertical .ux-menu-item-main {
+    clear: left;
+}
+
+.ux-menu a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #432;  
+    font-size: 12px;
+    line-height: 12px;
+    padding: 10px 5px;
+}
+
+.ux-menu a.ux-menu-link-last {
+}
+
+ux.menu ul a {
+    width: 100%;
+}
+
+.ux-menu a:focus,
+.ux-menu a:hover,
+.ux-menu a.ux-menu-link-hover {
+    outline: 0;
+}
+
+.ext-ie .ux-menu-clearfix {
+    zoom: 1;
+}
+
+.ux-menu-clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.ux-menu a.ux-menu-link-parent {
+    padding-right: 24px;
+    min-width: 1px;
+}
+
+.ux-menu ul a,
+.ux-menu.ux-menu-vertical a {
+    border-bottom: 0px;    
+}
+
+.ux-menu ul a.ux-menu-link-last,
+.ux-menu.ux-menu-vertical a.ux-menu-link-last {
+    width: 175px;
+}
+
+.ux-menu-arrow {
+    display: block;
+    width: 8px;
+    height: 6px;
+    right: 10px;
+    top: 14px;
+    position: absolute;
+    font-size: 0;
+}
+
+.ux-menu.ux-menu-vertical .ux-menu-arrow,
+.ux-menu ul .ux-menu-arrow  {
+    width: 6px;
+    height: 8px;
+    top: 13px; 
+}
+
+.ext-border-box .ux-menu-arrow {
+    top: 17px;
+}
+.ext-border-box .ux-menu.ux-menu-vertical .ux-menu-arrow,
+.ext-border-box .ux-menu ul .ux-menu-arrow {
+    top: 16px;
+}
+
+.ux-menu ul.ux-menu-hidden {
+    display: none;
+}
+/*menus da home*/
+/*ficar*/
+#simple-horizontal-menu-ficar {
+	width: 144px;
+	background: #717BFF;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-ficar a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-ficar a.linkTituloMenu2 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-ficar li ul .liMenu2Ficar .linkLiMenu2Ficar {
+	width: 134px;
+	background: #717BFF;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-ficar li ul .liMenu2Ficar .linkLiMenu2Ficar:hover {
+	background-color: #4856FF;
+}
+/*comer*/
+#simple-horizontal-menu-comer {
+	width: 144px;
+	background: #3A9E14;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-comer a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-comer a.linkTituloMenu2 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-comer li ul .liMenu2Comer .linkLiMenu2Comer {
+	width: 134px;
+	background: #45BC18;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-comer li ul .liMenu2Comer .linkLiMenu2Comer:hover {
+	background-color: #3A9E14 ;
+}
+/*agencia*/
+#simple-horizontal-menu-agencia {
+	width: 144px;
+	background: #DD6262;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-agencia a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-agencia a.linkTituloMenu2 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-agencia li ul .liMenu2Agencia .linkLiMenu2Agencia {
+	width: 134px;
+	background: #E89393;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-agencia li ul .liMenu2Agencia .linkLiMenu2Agencia:hover {
+	background-color: #DD6262;
+}
+/*compras*/
+#simple-horizontal-menu-compras {
+	width: 144px;
+	background: #C9B41F;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-compras a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-compras a.linkTituloMenu2 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-compras li ul .liMenu2Compras .linkLiMenu2Compras {
+	width: 134px;
+	background: #DAC221;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-compras li ul .liMenu2Compras .linkLiMenu2Compras:hover {
+	background-color: #C9B41F;
+}
+/**/
+/*pacotes*/
+/*data*/
+#simple-horizontal-menu-pacotes-datas {
+	width: 194px;
+	background: #9DA337;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-datas a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-datas a.linkTituloMenu3 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-datas li ul .liMenu3 .linkLiMenu3 {
+	width: 184px;
+	background: #AEB53C;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-datas li ul .liMenu3 .linkLiMenu3:hover {
+	background-color: #9DA337
+}
+/*familia*/
+#simple-horizontal-menu-pacotes-familia {
+	width: 194px;
+	background: #9DA337;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-familia a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-familia a.linkTituloMenu3 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-familia li ul .liMenu3 .linkLiMenu3 {
+	width: 184px;
+	background: #AEB53C;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-familia li ul .liMenu3 .linkLiMenu3:hover {
+	background-color: #9DA337
+}
+/*dia*/
+#simple-horizontal-menu-pacotes-dia {
+	width: 194px;
+	background: #9DA337;
+	margin-bottom: 6px;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-dia a {
+	font-size: 12px;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-dia a.linkTituloMenu3 {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-dia li ul .liMenu3 .linkLiMenu3 {
+	width: 184px;
+	background: #AEB53C;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#simple-horizontal-menu-pacotes-dia li ul .liMenu3 .linkLiMenu3:hover {
+	background-color: #9DA337
+}
+/**/
+/**/
+/*id de menu*/
+/*ficar*/
+#simple-vertical-menu-ficar {
+	border-left: 13px solid #717BFE;
+	background-color: #BBC1FF;
+	width: 204px;
+}
+#simple-vertical-menu-ficar a {
+	font-size: 12px;
+}
+#simple-vertical-menu-ficar a.linkTituloMenu {
+	font-size: 16px;
+}
+#simple-vertical-menu-ficar li ul .liFicar .linkLiMenuFicar {
+	width: 170px;
+	background-color: #BBC1FF;
+	border-bottom: 1px solid white;
+}
+#simple-vertical-menu-ficar li ul .liFicar .linkLiMenuFicar:hover {
+	background-color: #4856FF;
+	color: white;
+}
+/*comer*/
+#simple-vertical-menu-comer {
+	border-left: 13px solid #87E960;
+	background-color: #D2F6C6;
+	width: 204px;
+	margin-top: 12px;
+}
+#simple-vertical-menu-comer a {
+	font-size: 12px;
+}
+#simple-vertical-menu-comer a.linkTituloMenu {
+	font-size: 16px;
+}
+#simple-vertical-menu-comer li ul .liComer .linkLiMenuComer {
+	width: 170px;
+	background-color: #D2F6C6;
+	border-bottom: 1px solid white;
+}
+#simple-vertical-menu-comer li ul .liComer .linkLiMenuComer:hover {
+	background-color: #87E960;
+}
+/*agencias*/
+#simple-vertical-menu-agencia {
+	border-left: 13px solid #E37C7D;
+	background-color: #F3C7C8;
+	width: 204px;
+	margin-top: 12px;
+}
+#simple-vertical-menu-agencia a {
+	font-size: 12px;
+}
+#simple-vertical-menu-agencia a.linkTituloMenu {
+	font-size: 16px;
+}
+#simple-vertical-menu-agencia li ul .liAgencia .linkLiMenuAgencia {
+	width: 170px;
+	background-color: #F3C7C8;
+	border-bottom: 1px solid white;
+}
+#simple-vertical-menu-agencia li ul .liAgencia .linkLiMenuAgencia:hover {
+	background-color: #E37C7D;
+	color: white;
+}
+/*compras*/
+#simple-vertical-menu-compras {
+	border-left: 13px solid #F6E900;
+	background-color: #FFF8A7;
+	width: 204px;
+	margin-top: 12px;
+}
+#simple-vertical-menu-compras a {
+	font-size: 12px;
+}
+#simple-vertical-menu-compras a.linkTituloMenu {
+	font-size: 16px;
+}
+#simple-vertical-menu-compras li ul .liCompras .linkLiMenuCompras {
+	width: 170px;
+	background-color: #FFF8A7;
+	border-bottom: 1px solid white;
+}
+#simple-vertical-menu-compras li ul .liCompras .linkLiMenuCompras:hover {
+	background-color: #F6E900;
+}

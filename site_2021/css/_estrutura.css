@@ -1,0 +1,515 @@
+/* estrutura */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, input, select, option,
+form, label, textarea, table, caption,
+tbody, tfoot, thead, tr, th, td{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 12px;
+    font-family: 'Arial';
+    vertical-align: baseline;
+    color: #00385C;
+    float: left;
+    text-align: left;
+}
+:focus{
+    outline: 0;
+}
+html{
+    width: 100%;
+}
+body{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+.global {
+	width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-image: url("../imagens/bgTopo.png");
+}
+ol, ul{
+    list-style: none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td{
+    text-align: left;
+    font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+    content: "";
+}
+blockquote, q{
+    quotes: "" "";
+}
+br, strong{
+    float: none;
+    color: inherit;
+}
+strong{
+    font-weight: bold;
+}
+.right {
+    float: right;
+}
+.none{
+    float: none;
+    text-decoration: none;
+}
+.hidden{
+    display: none;
+}
+/*estrutura*/
+
+.agrupaSite {
+    width: 1004px;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+}
+.agrupaTopo {
+    width: 1004px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: url("../imagens/mapaTopo.jpg");
+}
+.agrupaMenu {
+    width: 1004px;
+    height: 35px;
+    padding: 0px 50px;
+    background-color: #00385C;
+}
+a.linkLogo {
+	margin: 26px 0px 0px 16px;
+	display: inline;
+}
+.agrupaBtTranslate {
+	float: right;
+}
+a.btTranslate {
+	width: 142px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url("../imagens/btTranslate.png");
+	text-align: center;
+	padding-top: 7px;
+	font-weight: bold;
+}
+a.btTranslate:hover {
+	background-position: top right;
+}
+.agrupaBusca {
+	clear: both;
+	width: 262px;
+	height: 24px;
+	margin-top: 17px;
+	padding: 10px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url("../imagens/fundoBusca.png");
+}
+.labelBusca {
+	width: 60px;
+	text-align: right;
+	padding-top: 4px;
+}
+.labelBusca img {
+	float: none;
+}
+.inputBusca {
+	background-color: #fff;
+	border: 1px solid #809DB9;
+	padding: 1px;
+	margin: 4px 6px 0px 4px;
+	display: inline;
+	width: 147px;
+}
+.menu {
+	width: 1004px;
+	height: 44px;
+	margin-top: 28px;
+	margin-bottom: 8px;
+}
+a.menuPrincipalLink {
+	font-size: 15px;
+	margin-right: 23px;
+	margin-left: 23px;
+	margin-top: 12px;
+	display: inline;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+a.menuPrincipalLink:hover, a.menuPrincipalLinkSemBarra:hover {
+	margin-top: 11px;
+}
+a.menuPrincipalLinkSemBarra {
+	font-size: 15px;
+	margin-top: 12px;
+	margin-left: 23px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;	
+}
+
+/*lateral1*/
+.lateral1 {
+	width: 217px;
+	margin: 0px 7px 0px 5px;
+	display: inline;
+}
+.agrupaMenuOnde {
+	width: 217px;	
+}
+.agrupaMenuLateral {
+	width: 217px;
+}
+.ulLateral {
+	width: 217px;
+}
+.liLateral {
+	width: 209px;
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	background-image: url("../imagens/doted1.jpg");
+	padding: 5px 4px 4px;
+}
+a.linkLateral {
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;	
+}
+a.linkLateral:hover {
+	text-decoration: underline;
+}
+.verde {color: #4E7414;}
+.azul {color: #135575;}
+/**/
+.agrupaConteudo {
+	width: 769px;
+	margin-left: 6px;
+}
+.agrupaBanner {
+	width: 759px;
+	height: 300px;
+	border: 1px solid #CCCCCC;	
+	background-color: #F2F2F2;
+	padding: 0px 5px 10px 5px;
+	margin-bottom: 10px;
+}
+/**/
+/*conteudo*/
+.conteudo {
+	width: 596px;
+}
+.agrupaOnde {
+	width: 596px;
+	margin-top: 10px;
+}
+.blocoOnde {
+	width: 144px;
+}
+.onde1 {
+	
+}
+.onde2 {
+	margin: 0px 6px;
+	display: inline;
+}
+.onde3 {
+	margin: 0px 6px 0px 0px;
+	display: inline;
+}
+.onde4 {
+	
+}
+.agrupaChamadaMapa {
+	padding-top: 8px;
+}
+
+.agrupaChamadaMapa a{
+	margin-bottom: 10px;
+}
+.agrupaPacotes {
+	width: 596px;
+}
+.blocoPacote {
+	width: 194px;
+	padding-top: 6px;
+}
+.pacote1 {
+	
+}
+.pacote2 {
+	margin: 0px 6px;
+	display: inline;
+}
+.pacote3 {
+	
+}
+.agrupaClimaTempo {
+	width: 217px;
+	text-align: center;
+	padding: 10px 0px 5px;
+}
+.agrupaInforma {
+	width: 274px;
+	padding-top: 8px;
+}
+.tituloInforma {
+	width: 262px;
+	background-color: #006699;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 6px;
+}
+.linksInforma {
+	width: 274px;
+	padding-top: 3px;
+}
+.pLinkInforma {
+	width: 270px;
+	margin-left: 4px;
+	display: inline;
+}
+a.linkInforma {
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.agrupaNoticia {
+	width: 314px;
+	padding-top: 8px;
+	margin-left: 6px;
+	display: inline;
+}
+.tituloNoticiaPequena {
+	width: 302px;
+	background-color: #004364;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 6px;
+}
+.agrupaBotaoPag {
+	width: 358px;
+	padding-bottom: 10px;
+}
+.linksNoticia {
+	width: 310px;
+	padding-top: 3px;
+	margin-left: 4px;
+	display: inline;
+}
+.pLinkNoticia {
+	width: 310px;
+}
+.numeroNoticia {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/**/
+.lateral2 {
+	width: 167px;
+	margin-left: 6px;
+}
+.bannerLateral2 {
+	padding: 0px 0px 6px;
+}
+.marcador {
+    margin-top: 3px;
+}
+/**/
+.agrupaRodape {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-repeat: repreat-x;
+    background-position: top left;
+    background-image: url("../imagens/bgRodape.png");
+}
+.conteudoRodape {
+    width: 980px;
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+}
+.imagemBixos {
+	margin-left: 60px;
+	display: inline;
+}
+.descRodape {
+	padding: 15px 0px 10px;
+	color: white;
+	width: 656px;
+}
+.agrupaZaib {
+	width: 100px;
+	color: white;
+	float: right;
+	font-size: 10px;	
+	text-align: right;
+}
+.agrupaZaib a {
+	text-decoration: none;
+	color: white;
+	font-size: 10px;
+	float: right;
+}
+.agrupaZaib a:hover {
+	text-decoration: underline;
+}
+.atualizacao{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+span.branco{
+    width: 100%;
+    display: inline;
+    text-align: center;
+    background-color: #FFF;
+}
+/*home*/
+.agrupaInformes {
+	width: 596px;
+	border-bottom: 4px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+a.linkTituloInforme {
+	font-weight: bold;
+	text-decoration: none;
+}
+a.linkTituloInforme:hover {
+	text-decoration: underline;
+}
+a.linkTextoInforme {
+	text-decoration: none;
+}
+a.linkTextoInforme:hover {
+	text-decoration: underline;
+}
+.tituloInformeInterna {
+	float: left;
+	width: 358px;
+	padding-bottom: 3px;
+}
+
+.bannerLinkCambara {
+	margin-top: 12px;
+}
+
+
+.linkMapaExpedicao {
+	margin-left: 10px;
+	color: #FF9900;
+	border-bottom: 1px dotted #FF9900;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.linkMapaExpedicao:hover {
+	border-bottom: 1px solid #FF9900;
+}
+
+.bg-aviso{
+background-image: url("/imagens/popup.jpg");
+width: 600px;
+height: 400px;
+float: none;
+margin: 0 auto;
+margin-top: 10%;
+}
+.bx-wrapper{
+    margin: 0 !important;
+}
+.bxslider{
+    width: 167px !important;
+    height: 110px !important;
+    list-style: none;
+}
+.bxslider li{
+    width: 167px !important;
+    height: 110px !important;
+}
+.bxslider li img{
+    width: 167px;
+    height: 110px;
+}
+.bx-controls{
+    display: none;  
+}
+.bxslider2{
+    width: 759px !important;
+    height: 300px !important;
+    list-style: none;
+}
+.bxslider2 li{
+    width: 759px !important;
+    height: 300px !important;
+}
+.bxslider2 li img{
+    width: 759px;
+    height: 300px;
+}
+.voltar-mapa a{
+  	padding: 25px 120px 25px 120px;
+  	background-color: #444;
+  	color: #FFF;
+  	text-decoration: none;
+  	font-weight: bold;
+  	font-size: 20px;
+  	-webkit-transition: 0.2s ease-in;
+    -moz-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+}
+.voltar-mapa a:hover {
+	background-color: #696969;
+}
+#voltar-mapa {
+  	padding: 0px 0px 0px 610px;
+	background-color: #DDD;
+}
+#zoom_01 {
+	clear: both;
+	margin-top: 20px;
+}
+.alinhar-video {
+	margin-top: 10px;
+}
+.video-yt {
+	margin-bottom: 20px;
+	padding-top: 40px;
+}
+.apoiadores {
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #444;
+}
+.apoiadores img {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

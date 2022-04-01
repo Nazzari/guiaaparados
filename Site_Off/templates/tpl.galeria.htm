@@ -1,0 +1,14 @@
+<!-- %inicio% -->
+					<div class="agrupaTituloInterna">
+						<p class="tituloInterna tituloVerde">Galeria de Fotos</p>
+					</div>
+					<div class="agrupaTextoInternaGaleria">
+						{%ds_galeria%}
+					</div>
+					<div class="agrupaFotosInternaGaleria">
+<!-- %while% -->
+						<a href="/{%link%}" rel="lightbox" title="{%tt_foto%}" class="lightbox">
+							<img src="/{%foto%}" alt="" />
+						</a>
+<!-- %fim% -->
+					</div>

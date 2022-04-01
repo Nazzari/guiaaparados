@@ -1,0 +1,129 @@
+<!-- %inicio% -->
+
+<script type="text/javascript" src="/jscript/jquery.js"></script>
+	<script type="text/javascript" src="/jscript/jquery.validate.js"></script>
+	<script type="text/javascript">
+		// jQuery(document).ready(function() {
+		// 	jQuery('#formPropostas').validate();
+		// });
+	</script>
+	<!--<script type="text/javascript" src="/jscript/mascaras.js"></script>-->
+
+	<script type="text/javascript" src="/js/jquery.maskedinput.js"></script>
+	
+ 	<script type="text/javascript">
+
+            jQuery( function($){
+
+                 $("#telefone").mask("(99) 9 9999-9999");
+                 $("#telefone2").mask("(99) 9999-9999");
+                 
+            });
+
+    </script>
+
+<section class="page-header" style="background-image: url(/img/fundo-internas.jpg);">
+	<div class="container">
+		<h2>Seja Parceiro</h2>
+		<ul class="thm-breadcrumb list-unstyled">
+			<li><a href="/">Home</a></li>
+		</ul><!-- /.thm-breadcrumb -->
+	</div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<section class="blog-list">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="blog-details__content">
+					<p>	Entre em contato conosco preenchendo o formulário abaixo</p>
+					<br/>
+
+					<div class="col-lg-7">
+                        <form action="/anuncie/enviar" class="contact-one__form formulario" id="formPropostas" method="post">
+                            <div class="row low-gutters">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <input type="text" id="email" name="email" placeholder="Email">
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <input type="text" class="inputComum telefone" id="telefone" name="telefone" onkeypress="mMascarasJS('TELEFONE', this.id); return(mCampoNumerico(this, event));" maxlength="14" placeholder="Telefone">
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-md-6 -->
+								<div class="col-md-12">
+                                    <div class="input-group">
+										<select class="input-group selectUF" id="uf" name="uf" style="width: 100%;
+										height: 74px;
+										display: block;
+										border: none;
+										outline: none;
+										background-color: #eceeef;
+										font-size: 16px;
+										font-weight: 500;
+										color: #9ca3a9;
+										padding-left: 30px;
+										padding-top: 30px;
+    padding-right: 30px;">
+											<option>AC</option>
+											<option>AL</option>
+											<option>AP</option>
+											<option>AM</option>
+											<option>BA</option>
+											<option>CE</option>
+											<option>DF</option>
+											<option>ES</option>
+											<option>GO</option>
+											<option>MA</option>
+											<option>MT</option>
+											<option>MS</option>
+											<option>MG</option>
+											<option>PA</option>
+											<option>PB</option>
+											<option>PR</option>
+											<option>PE</option>
+											<option>PI</option>
+											<option>RJ</option>
+											<option>RN</option>
+											<option>RS</option>
+											<option>RO</option>
+											<option>RR</option>
+											<option selected="selected">SC</option>
+											<option>SP</option>
+											<option>SE</option>
+											<option>TO</option>
+										</select>
+									</div>
+								</div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <textarea name="message" placeholder="Mensagem" id="mensagem" name="mensagem"></textarea>
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <button type="submit" class="btEnviar thm-btn contact-one__btn">Enviar</button><!-- /.thm-btn contact-one__btn -->
+                                    </div><!-- /.input-group -->
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row low-gutters -->
+                        </form>
+                    </div><!-- /.col-lg-7 -->
+
+				</div><!-- /.blog-details__content -->
+			</div>
+		</div>
+	</div>
+</section>

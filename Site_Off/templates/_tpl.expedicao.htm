@@ -1,0 +1,49 @@
+<!-- %inicio% -->
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        vertical: true,
+        scroll: 2
+    });
+});
+
+</script>
+					<div class="agrupaTituloInterna">
+						<p class="tituloInterna tituloVerde">Expedição aparados 4x4</p>
+					</div>
+					<div class="agrupaFotosInterna">
+						<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+<!-- %while% --> 
+						    <li>
+						    	<a href="/{%link%}" rel="lightbox" title="{%tt_foto%}" class="lightbox">
+									<img src="/{%foto%}" alt="" class="none" />
+								</a>	
+						    </li>
+<!-- %fim% -->						    
+	  					</ul>		
+						<a href="/visualizar-mapa-jeep" title="Mapa da Expedição" 
+								class="linkMapaExpedicao">Mapa da Expedição</a>
+					</div>
+					<div class="agrupaTextoInterna">
+						{%ds_expedicao%}
+					</div>
+					<div class="cemporcento">
+						<div class="agrupaApoio">
+							<div class="cemporcento">
+								<h1 class="tituloInternaApoiador">Apoiador:</h1>
+							</div>
+							<a id="apoiadorCambara" href="http://www.cambaraonline.com.br/">
+								<img src="/imagens/cambaraOnline.jpg" alt="Cambará Online" title="Cambará Online">
+							</a>
+						</div>
+						<h1 class="linkMapaExpedicao agrupaTitulo">Pousadas da região</h1>
+						<div class="agrupaLinks">
+							<h1 class="linkMapaExpedicao">Em Cambará do Sul - RS:</h1>
+							<a href="http://www.cambaradosul.org">Cambará do Sul</a>
+							<a href="http://www.cambaraonline.com.br/">Cambará Online</a>
+							<h1 class="linkMapaExpedicao">Em Bom Jardim da Serra - SC:</h1>
+							<a href="http://www.serracatarinense.com/bom_jardim/pousadas.html">Serra Catarinense</a>
+							<a href="http://www.guiaaparadosdaserra.com.br/onde-ficar/1/bom-jardim-da-serra.html">Guia Aparados da Serra</a>
+						</div>
+					</div>

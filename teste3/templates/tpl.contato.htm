@@ -1,0 +1,132 @@
+<!-- %inicio% -->
+
+  <script type="text/javascript" src="/jscript/mascaras.js"></script>
+
+<br>
+<br>
+
+<div class="container">
+
+  <div class="titulo-pacotes-passeios">
+    <h3 class="title-interna">CONTATO</h3>
+  </div>
+  <br>
+
+  <div class="interna-conteudo">
+    <div class="col-md-6">
+
+      <div class="row">
+            <form action="/contato/enviar" class="formulario" id="formPropostas" method="post"> 
+                  <div class="linhaForm">
+                    <input type="text" class="inputComum required" id="nome" name="nome" placeholder="Nome" />
+                  </div>
+                  <br><br>
+                  <div class="linhaForm">
+                    <input type="text" class="inputComum required" id="email" name="email" placeholder="E-mail" />
+                  </div>
+                  <br><br>
+                  <div class="linhaForm">
+                    <input type="text" class="inputComum telefone" id="telefone" name="telefone" onkeypress="mMascarasJS('TELEFONE', this.id); return(mCampoNumerico(this, event));" maxlength="14" placeholder="Telefone" />
+                  </div>
+                  <br><br>
+                  <div class="linhaForm">
+                    <input type="text" class="inputComum cidade" id="cidade" name="cidade" placeholder="Cidade" />
+                  </div>
+                  <br>
+                  <div class="linhaForm">
+                    <label class="labelComum uf" for="uf">
+                      <p>UF:</p>
+                    </label>
+                    <select class="selectUF" id="uf" name="uf">
+                      <option>AC</option>
+                      <option>AL</option>
+                      <option>AP</option>
+                      <option>AM</option>
+                      <option>BA</option>
+                      <option>CE</option>
+                      <option>DF</option>
+                      <option>ES</option>
+                      <option>GO</option>
+                      <option>MA</option>
+                      <option>MT</option>
+                      <option>MS</option>
+                      <option>MG</option>
+                      <option>PA</option>
+                      <option>PB</option>
+                      <option>PR</option>
+                      <option>PE</option>
+                      <option>PI</option>
+                      <option>RJ</option>
+                      <option>RN</option>
+                      <option>RS</option>
+                      <option>RO</option>
+                      <option>RR</option>
+                      <option selected="selected">SC</option>
+                      <option>SP</option>
+                      <option>SE</option>
+                      <option>TO</option>
+                    </select>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-xs-6">
+                      <div class="linhaForm">
+                        <input type="text" class="inputComum telefone" id="data_ini" name="data_ini" onkeypress="mMascarasJS('DATA', this.id); return(mCampoNumerico(this, event));" maxlength="10" placeholder="Data da chegada" />
+                      </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                      <div class="linhaForm">
+                        <input type="text" class="inputComum telefone" id="data_fim" name="data_fim" onkeypress="mMascarasJS('DATA', this.id); return(mCampoNumerico(this, event));" maxlength="10" placeholder="Data da saida" />
+                      </div>
+                    </div>
+                  
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-xs-6">
+                      <div class="linhaForm">
+                        <label class="" for="assunto">
+                          <p>Assunto:</p>
+                        </label>
+                        <br>
+                        <select class="selectAssunto" id="assunto" name="assunto">
+                          <option value="Somente Hospedagem">Somente Hospedagem</option>
+                          <option value="Hospedagem + Passeios">Hospedagem + Passeios</option>
+                          <option value="Pacotes">Pacotes</option>
+                          <option value="Outros">Outros</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="col-xs-6">
+                      <div class="linhaForm">
+                        <label class="" for="numeroPessoas">
+                          <p>Nº Pessoas:</p>
+                        </label>
+                        <br>
+                        <input type="text" class="inputComum uf" id="numeroPessoas" name="numeroPessoas" onkeypress="return(mCampoNumerico(this, event));" maxlength="10" placeholder="Nº Pessoas" />
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="linhaForm">
+                    <textarea class="textArea required" id="mensagem" name="mensagem" rows="1" cols="1" placeholder="Mensagem"></textarea>
+                  </div>
+                  <input type="submit" alt="Enviar" title="Enviar" class="btEnviar"/>
+              </form>
+      </div>
+
+    </div>
+    <div class="col-md-6 info-contato">
+      {%descricao%}
+    </div>
+  </div>  
+
+</div>
+
+<br>
+<br>

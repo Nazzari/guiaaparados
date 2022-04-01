@@ -1,0 +1,29 @@
+<!-- %inicio% -->
+    <script type="text/javascript">
+
+        jQuery(document).ready(function() {
+        jQuery('#mycarousel').jcarousel({
+            vertical: true,
+            scroll: 2
+        });
+        });
+    </script>
+
+    <div class="agrupaTituloInterna">
+        <p class="tituloInterna tituloVerde">Trilha dos Canyons e Cachoeiras 4x4</p>
+    </div>
+
+    <div class="agrupaFotosInterna">
+        <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+<!-- %while% --> 
+            <li>
+                <a href="/{%link%}" rel="lightbox" title="{%tt_foto%}" class="lightbox">
+                    <img src="/{%foto%}" alt="" class="none" />
+                </a>    
+            </li>
+<!-- %fim% -->                          
+        </ul>
+    </div>
+    <div class="agrupaTextoInterna">
+        {%ds_excursao%}
+    </div>

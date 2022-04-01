@@ -1,0 +1,42 @@
+<!-- %inicio% -->
+<div class="agrupaTituloInterna">
+	<p class="tituloInterna tituloOndeComer">Onde Comer - {%nm_cidade%}</p>
+</div>
+<!-- %while% -->
+<div class="agrupaFotosInterna">
+	<a href="/{%link%}" rel="lightbox" title="{%nm_comer%}" class="lightbox">
+		<img src="/{%foto%}" alt="" class="none" />
+	</a>		  					
+</div>
+<div class="agrupaDescLateral">
+	<p class="nomeCliente">
+		{%nm_comer%}
+	</p>	
+	<p class="endereco">
+		{%end_comer%}<br />
+		<!-- {%tel_comer%} -->
+	</p>
+	<!-- <div class="outrosDescs">
+		<strong>Email: </strong>{%em_comer%}<br />
+		<strong>Site: </strong> {%st_comer%}
+		
+	</div> -->
+	<div class="agrupaLink">
+		<br />
+		<a href="{%link_comer%}" class="linkDetalhes">Ver Detalhes</a>
+	</div>
+</div>
+<div class="agrupaTextoDescricao" >
+	<div id="{%cd_comer%}" style="display: none;">
+		
+		{%ds_comer%}
+		<div class="agrupaOutrasFotos">
+<!-- %while_while% -->
+			<a href="/{%links%}" rel="lightbox" title="{%tt_fotos%}" class="outrasFotos lightbox">
+				<img src="/{%fotos%}" alt="" class="none" />
+			</a>
+<!-- %fim_while_while% -->
+		</div>
+	</div>
+<!-- %fim% -->
+</div>

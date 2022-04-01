@@ -1,0 +1,99 @@
+.fancy-new-slider{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    margin:0 auto;
+    /*background-image: url('../img/fundo-slider.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+}
+.fancy-new-slider ul{
+    float:left;
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+.fancy-new-slider li{
+    display:inline-block;
+    float:left;   
+    width:100%;
+    height:100%;
+}
+.fancy-new-slider img{
+    width:100%;
+    height:100%;
+}
+
+
+.fancy-new-slider-2{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    margin:0 auto;
+    background-color: #434343;
+}
+.fancy-new-slider-2 ul{
+    float:left;
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+.fancy-new-slider-2 li{
+    display:inline-block;
+    float:left;   
+    width:100%;
+    height:100%;
+}
+.fancy-new-slider-2 img{
+    width:100%;
+    height:100%;
+}
+
+
+
+
+/**********Grey Theme***************/
+.fancy-new-slider-grey{
+    border: 20px solid #8e8c8c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #8e8c8c;
+}
+/**********Black Theme***************/
+/*.fancy-new-slider-black{
+    
+    border: 20px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+*//**********White Theme***************/
+.fancy-new-slider-white{
+    border: 20px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #8e8c8c;
+}
+/******************Bullets*************************/
+.slidify-bullets{
+   width:100%;
+   display:none;
+   text-align:center;
+   margin-top:-32px;
+   float:left;
+   position: relative;
+   z-index: 99;
+}
+.slidify-bullets a{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 3px solid #929090;
+    border-radius: 20px;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+}
+.slidify-bullets a.bullet-active{
+    background:#000;
+}

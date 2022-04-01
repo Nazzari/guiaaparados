@@ -1,0 +1,237 @@
+<!-- %inicio% -->
+<script type="text/javascript" src="/jscript/mascaras.js"></script>
+<div class="agrupaContInterna">
+    <div class="agrupaTituloInterna">
+        <p class="tituloInterna tituloAzul">Monte seu Pacote</p>
+    </div>
+    <div class="agrupaGaleriaInterna">
+        <form action="/aventuras-personalizadas/enviar" class="formulario" id="formPropostas" method="post">
+            <div class="linhaForm">
+                <label class="labelComum" for="nome">
+                    Nome:
+                </label>
+                <input type="text" class="inputComum required" id="nome" name="nome" />
+            </div>
+            <div class="linhaForm">
+                <label class="labelComum" for="email">
+                    E-mail:
+                </label>
+                <input type="text" class="inputComum required" id="email" name="email" />
+            </div>
+            <div class="linhaForm">
+                <label class="labelComum" for="telefone">
+                    Telefone:
+                </label>
+                <input type="text" class="inputComum telefone" id="telefone" name="telefone" onkeypress="mMascarasJS('TELEFONE', this.id); return(mCampoNumerico(this, event));" maxlength="14" />
+            </div>
+            <div class="linhaForm">
+                <label class="labelComum" for="cidade">
+                    Cidade:
+                </label>
+                <input type="text" class="inputComum cidade" id="cidade" name="cidade" />
+                <label class="labelComum uf" for="uf">
+                    UF:
+                </label>
+                <select class="selectUF" id="uf" name="uf">
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>DF</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option selected="selected">SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="transporte">
+                    Transporte para chegar ao destino:
+                </label>
+                <select class="selectAssunto" id="transporte" name="transporte">
+                    <option value="Veiculo próprio">Veiculo próprio</option>
+                    <option value="Veiculo locado">Veiculo locado</option>
+                    <option value="Transfer \ Traslado">Transfer \ Traslado</option>
+                    <option value=" Linhas de Onibus"> Linhas de Onibus</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="data_ini">
+                    Possivel data da chegada:
+                </label>
+                <input type="text" class="inputComum telefone" id="data_ini" name="data_ini" onkeypress="mMascarasJS('DATA', this.id); return(mCampoNumerico(this, event));" maxlength="10" />
+            </div>
+            
+            <div class="linhaForm">
+                <label class="labelComum" for="data_fim">
+                    Possivel data da saida:
+                </label>
+                <input type="text" class="inputComum telefone" id="data_fim" name="data_fim" onkeypress="mMascarasJS('DATA', this.id); return(mCampoNumerico(this, event));" maxlength="10" />
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="categoria_hospedagem">
+                    Categoria de Hospedagem:
+                </label>
+                <select class="selectAssunto" id="categoria_hospedagem" name="categoria_hospedagem">
+                    <option value="Singela Econômica - Simples">Singela Econômica - Simples</option>
+                    <option value="Econômica - Aconchegante">Econômica - Aconchegante</option>
+                    <option value="Conforto - Luxo">Conforto - Luxo</option>
+                </select>
+            </div>      
+
+            <div class="linhaForm">
+                <label class="labelComum" for="numeroPessoas">
+                    Nº Pessoas:
+                </label>
+                <input type="text" class="inputComum uf" id="numeroPessoas" name="numeroPessoas" onkeypress="return(mCampoNumerico(this, event));" maxlength="10" />
+            </div>
+            
+            <div class="linhaForm">
+                <label class="labelComum" for="criancas">
+                    Com Crianças:
+                </label>
+                <select class="selectAssunto" id="criancas" name="criancas">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="idade_criancas">
+                    Idade da Criança:
+                </label>
+                <select class="selectAssunto" id="idade_criancas" name="idade_criancas">
+                    <option value="0 a 5 anos">0 a 5 anos</option>
+                    <option value="6 a 10 anos">6 a 10 anos</option>
+                    <option value="10 a 13 anos">10 a 13 anos</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="participante_idoso" style="width: 100%; text-align: left;">
+                    Participante acima de 65 anos que costuma realizar curtas ou média caminhadas:
+                </label>
+                <select class="selectAssunto" id="participante_idoso" name="participante_idoso">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="participante_opcao" style="width: 100%; text-align: left;">
+                    Participante: Gestante acima de 5 meses \ Deficiência Física \ Se considera Idoso \ Se considera muito Obeso:
+                </label>
+                <select class="selectAssunto" id="participante_opcao" name="participante_opcao">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" for="participante_cadeirante">
+                   Participante Cadeirante:
+                </label>
+                <select class="selectAssunto" id="participante_cadeirante" name="participante_cadeirante">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+
+            <div class="linhaForm">
+                <label class="labelComum" style="width: 100%; text-align: left; margin-bottom: 20px;">Passeios e Aventuras:</label>
+            </div>   
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_itaimbezinho" value="Passeio Canyon Itaimbézinho"><a href="#">Passeio Canyon Itaimbézinho</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_fortaleza" value="Passeio Canyon Fortaleza"><a href="#">Passeio Canyon Fortaleza</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_cachoeiras" value="Passeio Rota das Cachoeiras 4x4"><a href="#">Passeio Rota das Cachoeiras 4x4</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_offroad" value="Passeio Off Road Canyons e Cachoeiras"><a href="#">Passeio Off Road Canyons e Cachoeiras</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_boi" value="Aventura Trilha do Boi"><a href="#">Aventura Trilha do Boi</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_pedra" value="Aventura Canyon da Pedra"><a href="#">Aventura Canyon da Pedra</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_tigre" value="Aventura Trilha do Tigre Preto."><a href="#">Aventura Trilha do Tigre Preto.</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_realengo" value="Travessia do Canyon Realengo"><a href="#">Travessia do Canyon Realengo</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_5h" value="Cavalgada de 05hs margeando os Canyons"><a href="#">Cavalgada de 05hs margeando os Canyons</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_pinheirinho" value="Cavalgada de 02:30h ao Canyon Pinheirinho"><a href="#">Cavalgada de 02:30h ao Canyon Pinheirinho</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_nasssucar" value="Cavalgada de 02hs a Cachoeira do Nassucar"><a href="#">Cavalgada de 02hs a Cachoeira do Nassucar</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_rural" value="Tur Rural - Tur em Fazendas."><a href="#">Tur Rural - Tur em Fazendas.</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_outros" value="Outros passeios">Outros passeios<br/>
+            </div>
+
+
+            <div class="linhaForm">
+                <label class="labelComum" style="width: 100%; text-align: left; margin-bottom: 20px;">Atividades Extras:</label>
+            </div>   
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_rapel" value="Rapel"><a href="#">Rapel</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_canionismo" value="Canionismo - Para pessoas com boa experiência em atividade vertical"><a href="#">Canionismo - Para pessoas com boa experiência em atividade vertical</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_bote" value="Passeio de Bote"><a href="#">Passeio de Bote</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_bike" value="Passeio de Bike"><a href="#">Passeio de Bike</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_4x4" value="Outros passeios de 4x4"><a href="#">Outros passeios de 4x4</a><br/>
+            </div>
+            <div class="linhaForm">
+                <input type="checkbox" name="passeio_cavalgada" value="Outros passeios de Cavalgada"><a href="#">Outros passeios de Cavalgada</a><br/>
+            </div>
+                        
+            <div class="linhaForm">
+                <label class="labelComum" for="mensagem">
+                    Observações:
+                </label>
+                <textarea class="textArea required" id="mensagem" name="mensagem" rows="1" cols="1"></textarea>
+            </div>
+            <input type="image" src="/imagens/btEnviar.png" alt="Enviar" title="Enviar" class="btEnviar"/>
+        </form>
+    </div>
+</div>  
+

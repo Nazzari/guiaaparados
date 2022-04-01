@@ -1,0 +1,99 @@
+<!-- %inicio% -->	
+	<script type="text/javascript" src="/jscript/jquery2.js"></script>
+	<script type="text/javascript" src="/jscript/jquery.validate.js"></script>
+	<script type="text/javascript">
+		// jQuery(document).ready(function() {
+		// 	jQuery('#formPropostas').validate();
+		// });
+	</script>
+	<!-- <script type="text/javascript" src="/jscript/mascaras.js"></script> -->
+
+	<script type="text/javascript" src="/js/jquery.maskedinput.js"></script>
+	
+ 	<script type="text/javascript">
+
+            jQuery( function($){
+
+                 $("#telefone").mask("(99) 9 99999-9999");
+                 $("#telefone2").mask("(99) 9999-9999");
+                 
+            });
+
+    </script>
+
+					<div class="agrupaTituloInterna">
+						<p class="tituloInterna tituloAzul">Anuncie</p>
+					</div>
+<!-- %while% -->
+					<div class="agrupaDescricaoForm">
+						Entre em contato conosco preenchendo o formulário abaixo<br/>
+						
+					</div>
+					<div class="agrupaFormulario">
+						<form action="/anuncie/enviar" class="formulario" id="formPropostas" method="post">
+							<div class="linhaForm">
+								<label class="labelComum" for="nome">
+									Nome:
+								</label>
+								<input type="text" class="inputComum required" id="nome" name="nome" />
+							</div>
+							<div class="linhaForm">
+								<label class="labelComum" for="email">
+									E-mail:
+								</label>
+								<input type="text" class="inputComum required" id="email" name="email" />
+							</div>
+							<div class="linhaForm">
+								<label class="labelComum" for="telefone">
+									Telefone:
+								</label>
+								<input type="text" class="inputComum telefone" id="telefone" name="telefone" maxlength="17" />
+							</div>
+							<div class="linhaForm">
+								<label class="labelComum" for="cidade">
+									Cidade:
+								</label>
+								<input type="text" class="inputComum cidade" id="cidade" name="cidade" />
+								<label class="labelComum uf" for="uf">
+									<p style="color:#444;">UF:</p>
+								</label>
+								<select class="selectUF" id="uf" name="uf">
+									<option>AC</option>
+									<option>AL</option>
+									<option>AP</option>
+									<option>AM</option>
+									<option>BA</option>
+									<option>CE</option>
+									<option>DF</option>
+									<option>ES</option>
+									<option>GO</option>
+									<option>MA</option>
+									<option>MT</option>
+									<option>MS</option>
+									<option>MG</option>
+									<option>PA</option>
+									<option>PB</option>
+									<option>PR</option>
+									<option>PE</option>
+									<option>PI</option>
+									<option>RJ</option>
+									<option>RN</option>
+									<option>RS</option>
+									<option>RO</option>
+									<option>RR</option>
+									<option selected="selected">SC</option>
+									<option>SP</option>
+									<option>SE</option>
+									<option>TO</option>
+								</select>
+							</div>
+							
+							<div class="linhaForm">
+								<label class="labelComum" for="mensagem">
+									Mensagem:
+								</label>
+								<textarea class="textArea required" id="mensagem" name="mensagem" rows="1" cols="1"></textArea>
+							</div>
+							<input type="image" src="/imagens/btEnviar.png" alt="Enviar" title="Enviar" class="btEnviar"/>
+						</form>
+					</div>

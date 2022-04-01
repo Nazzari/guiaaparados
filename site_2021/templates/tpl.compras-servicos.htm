@@ -1,0 +1,41 @@
+<!-- %inicio% -->
+
+
+<div class="capa-interna">
+	<img src="/img/fundo-internas.jpg">
+
+	<div class="container">
+		<h2>Compras e Serviços</h2>
+	</div>
+</div>
+
+<div class="conteudo-interna">
+	<div class="container lista-onde-ficar">
+
+		<div class="row titulo-lista-onde-ficar">
+			<div class="col-md-6">
+				<h3>{%nm_cidade%}</h3>
+			</div>
+			<div class="col-md-6">
+				<a href="/compras-e-servicos/10/outros" class="bt-outras-cidades">
+					OUTRAS CIDADES
+				</a>
+			</div>
+		</div>
+
+<!-- %while% -->
+		<div class="col-md-4 dividir-conteudo-interna">
+			<a href="{%link_compras%}" title="{%nm_compra%}">
+			<img src="/{%foto%}" class="img-responsive" alt="{%nm_compra%}" title="{%nm_compra%}">
+			<h5>{%nm_compra%}</h5>
+			<P>
+				{%end_compra%}
+			</P>
+			</a>
+			<br>
+			<a href="{%link_compras%}">VER MAIS</a>
+		</div>
+<!-- %fim_while_while% -->		
+	</div>
+</div>	
+<!-- %fim% -->

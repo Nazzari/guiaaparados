@@ -1,0 +1,402 @@
+<!-- %inicio% -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>{%titulo_site_config%}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Content-Language" content="pt-br" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store" />
+		<meta http-equiv="Pragma" content="no-cache, no-store" />
+		<meta name="description" content="{%description_site_config%}" />
+		<meta name="keywords" content="{%keywords_site_config%}" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Zaib Tecnologia" />
+
+		<link href="/css/estrutura.css" rel="stylesheet" type="text/css" />
+		<link href="/css/internasComuns.css" rel="stylesheet" type="text/css" />
+		<link href="/css/lightbox.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="/skins/tango/skin.css" />
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" />
+		<link href="/css/thickbox.css" rel="stylesheet" type="text/css"/>
+		<link href="/css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+		
+	  	<link rel="stylesheet" href="/css/normalize.css">
+  		<link rel="stylesheet" href="/css/gallery.prefixed.css">
+  		<link rel="stylesheet" href="/css/gallery.theme.css">
+
+
+		<!--<script type="text/javascript" src="/jscript/thickbox.js"></script>-->
+		<script type="text/javascript" src="/jscript/flash.js"></script>
+		<script type="text/javascript" src="/jscript/jquery.js"></script>
+		<script type="text/javascript" src="/jscript/swfobject.js"></script>
+		<script type="text/javascript" src="/jscript/jquery.pngFix.js"></script>
+		<script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="/js/ext-core-debug.js"></script>
+		<script type="text/javascript" src="/js/menu.js"></script>
+		<script type="text/javascript" src="/jscript/jquery.lightbox.js"></script>
+        <script type="text/javascript" src="/jscript/lightbox.js"></script>
+        <script type="text/javascript" src="/jscript/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-migrate-1.2.1.js"></script>
+
+
+
+
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+		    // $('.agrupaSite').pngFix();
+
+		    $('.bxslider').bxSlider({
+				mode: 'fade',
+	            auto: true
+			});
+			$('.bxslider2').bxSlider({
+				mode: 'fade',
+	            auto: true
+			});
+		});
+
+		</script>
+
+		
+		{%analytics_site_config%}
+
+
+
+	</head>
+	<body>
+
+		<div class="global">
+		<div class="agrupaSite">
+			<div class="agrupaTopo">
+				<a href="/" class="linkLogo">
+					<img src="/imagens/logo.png" alt="" title="" />
+				</a>
+				<div class="agrupaLateralTopo right">
+					<div class="agrupaBtTranslate">
+						<div id="google_translate_element"></div><script>
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({
+							    pageLanguage: 'pt',
+							    includedLanguages: 'es,en',
+							    autoDisplay: false,
+							    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+							  }, 'google_translate_element');
+							}
+							</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					</div>
+					<div class="agrupaBusca">
+						<form action="/formBusca/" method="GET">
+							<label class="labelBusca">
+								<img src="/imagens/tituloBusca.png"/>
+							</label>
+							<input type="text" name="key" class="inputBusca"/>
+							<input type="image" src="/imagens/btOk.png" class="botaoOk"/>
+						</form>
+					</div>
+				</div>
+				<div class="menu">
+					<a href="/" class="menuPrincipalLink">
+						P�GINA PRINCIPAL
+					</a>
+					<a href="/compre-o-guia-impresso" class="menuPrincipalLink">
+						COMPRE O GUIA IMPRESSO
+					</a>
+					<a href="/parceiros" class="menuPrincipalLink">
+						PARCEIROS
+					</a>
+					<a href="/anuncie" class="menuPrincipalLink">
+						ANUNCIE
+					</a>
+					<a href="/quem-somos" class="menuPrincipalLink">
+						QUEM SOMOS
+					</a>
+					<a href="/escolha-fale-conosco" class="menuPrincipalLinkSemBarra">
+						FALE CONOSCO
+					</a>
+				</div>
+			</div>
+			<div class="lateral1">
+				<div class="agrupaMenuOnde">
+					<script>
+			            Ext.onReady(function() {
+			                new Ext.ux.Menu('simple-vertical-menu-ficar', {
+			                   	direction: 'vertical'
+
+			                });
+
+			                new Ext.ux.Menu('simple-vertical-menu-comer', {
+			                    direction: 'vertical'
+			                });
+
+			                new Ext.ux.Menu('simple-vertical-menu-agencia', {
+			                    direction: 'vertical'
+			                });
+
+			                new Ext.ux.Menu('simple-vertical-menu-compras', {
+			                    direction: 'vertical'
+			                });
+			            });
+			        </script>
+			        <style>
+			            .ux-menu a.current {
+			                background-image: url('images/menu-item-bg-current.png');
+			                border-color: #cbc0b7;
+			            }
+			        </style>
+
+					<ul id="simple-vertical-menu-ficar">
+			    		<li>
+			    		    <a href="#" class="linkTituloMenu">Onde Fica</a>
+			                <ul>
+			                    <li class="liFicar"><a href="/onde-ficar/3/cambara-do-sul" class="linkLiMenuFicar">Cambar� do Sul - RS</a></li>
+			                   <!--  <li class="liFicar"><a href="/onde-ficar/1/bom-jardim-da-serra" class="linkLiMenuFicar">Bom Jardim da Serra - SC</a></li>
+			                    <li class="liFicar"><a href="/onde-ficar/5/praia-grande" class="linkLiMenuFicar">Praia Grande - SC</a></li>
+			                    <li class="liFicar"><a href="/onde-ficar/8/sao-jose-dos-ausentes" class="linkLiMenuFicar">S�o Jos� dos Ausentes - RS</a></li>
+			                    <li class="liFicar"><a href="/onde-ficar/9/urubici" class="linkLiMenuFicar">Urubici - SC</a></li> -->
+			                    <li class="liFicar"><a href="/onde-ficar/10/outros" class="linkLiMenuFicar">Outros</a></li>
+			                </ul>
+			            </li>
+			        </ul>
+			        <ul id="simple-vertical-menu-comer">
+			    		<li>
+			    		    <a href="#" class="linkTituloMenu">Onde Comer</a>
+			                <ul>
+			                	<li class="liComer"><a href="/onde-comer/3/cambara-do-sul" class="linkLiMenuComer">Cambar� do Sul - RS</a></li>
+			                	<!-- <li class="liComer"><a href="/onde-comer/1/bom-jardim-da-serra" class="linkLiMenuComer">Bom Jardim da Serra - SC</a></li>
+			                    <li class="liComer"><a href="/onde-comer/5/praia-grande" class="linkLiMenuComer">Praia Grande - SC</a></li>
+			                    <li class="liComer"><a href="/onde-comer/8/sao-jose-dos-ausentes" class="linkLiMenuComer">S�o Jos� dos Ausentes - RS</a></li>
+			                    <li class="liComer"><a href="/onde-comer/9/urubici" class="linkLiMenuComer">Urubici - SC</a></li> -->
+			                    <li class="liComer"><a href="/onde-comer/10/outros" class="linkLiMenuComer">Outros</a></li>
+			                </ul>
+			            </li>
+			        </ul>
+			        <ul id="simple-vertical-menu-agencia">
+			    		<li>
+			    		    <a href="#" class="linkTituloMenu">Ag�ncias / Guias</a>
+			                <ul>
+			                    <li class="liAgencia"><a href="/agencias-guias/3/cambara-do-sul" class="linkLiMenuAgencia">Cambar� do Sul - RS</a></li>
+			                    <!-- <li class="liAgencia"><a href="/agencias-guias/1/bom-jardim-da-serra" class="linkLiMenuAgencia">Bom Jardim da Serra - SC</a></li>
+			                    <li class="liAgencia"><a href="/agencias-guias/5/praia-grande" class="linkLiMenuAgencia">Praia Grande - SC</a></li>
+			                    <li class="liAgencia"><a href="/agencias-guias/8/sao-jose-dos-ausentes" class="linkLiMenuAgencia">S�o Jos� dos Ausentes - RS</a></li>
+			                    <li class="liAgencia"><a href="/agencias-guias/9/urubici" class="linkLiMenuAgencia">Urubici - SC</a></li> -->
+			                    <li class="liAgencia"><a href="/agencias-guias/10/outros" class="linkLiMenuAgencia">Outros</a></li>
+			                </ul>
+			            </li>
+			        </ul>
+			        <ul id="simple-vertical-menu-compras">
+			    		<li>
+			    		    <a href="#" class="linkTituloMenu">Compras e Servi�os</a>
+			                <ul>
+								<li class="liCompras"><a href="/compras-e-servicos/3/cambara-do-sul" class="linkLiMenuCompras">Cambar� do Sul - RS</a></li>
+			                   <!--  <li class="liCompras"><a href="/compras-e-servicos/1/bom-jardim-da-serra" class="linkLiMenuCompras">Bom Jardim da Serra - SC</a></li>
+			                    <li class="liCompras"><a href="/compras-e-servicos/5/praia-grande" class="linkLiMenuCompras">Praia Grande - SC</a></li>
+			                    <li class="liCompras"><a href="/compras-e-servicos/8/sao-jose-dos-ausentes" class="linkLiMenuCompras">S�o Jos� dos Ausentes - RS</a></li>
+			                    <li class="liCompras"><a href="/compras-e-servicos/9/urubici" class="linkLiMenuCompras">Urubici - SC</a></li> -->
+			                    <li class="liCompras"><a href="/compras-e-servicos/10/outros" class="linkLiMenuCompras">Outros</a></li>
+			                </ul>
+			            </li>
+			        </ul>
+				</div>
+				<div class="bannerLateralEsquerda">
+					<script type="text/javascript">exibeFlash("/imagens/flash/banner19-12.swf","167","110");</script>
+				</div>
+				<div class="bannerLateralEsquerda">
+					<script type="text/javascript">exibeFlash("/imagens/flash/adventure.swf","167","110");</script>
+				</div>
+
+				<div class="agrupaMenuLateral">
+					<ul class="ulLateral">
+						<li class="liLateral">
+							<a href="/atrativos" class="linkLateral verde">
+								Atrativos
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/galeria-de-fotos" class="linkLateral verde">
+								Galeria de fotos
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/os-trekkings-nos-aparados" class="linkLateral verde">
+								Os Trekkings nos Aparados
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/as-cavalgadas-nos-aparados" class="linkLateral verde">
+								Cavalgada Aparados da Serra
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/excursao-para-grupos-colegios-universidades" class="linkLateral verde">
+								Excurs�o para Grupos/ Col�gios/ Universidades
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/o-que-e-aparados-da-serra" class="linkLateral verde">
+								O que � Aparados da Serra
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/expedicao-aparados-4x4" class="linkLateral verde">
+								Expedi��o Aparados 4x4
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/trilha-dos-canyons" class="linkLateral verde">
+								Trilha dos Canyons e Cachoeiras 4x4
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/pacotes-e-passeios-personalizados" class="linkLateral verde">
+								Tour para Itaimbezinho
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/translados-transfer" class="linkLateral verde">
+								Translados/Transfer
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="agrupaClimaTempo">
+					<iframe src="http://selos.climatempo.com.br/selos/MostraSelo.php?CODCIDADE=1381,3139,4119,3483&amp;SKIN=verde"
+					marginheight="0" marginwidth="0" width="150" frameborder="0" height="170" scrolling="no" class="none"></iframe>
+
+					<a href="http://www.youtube.com/watch?v=W487qfW3oHc&feature=youtu.be" style="width:185px; height: 185px; margin-top: 20px; margin-left: 15px;">
+						<img src="/imagens/video.jpg" alt="" />
+					</a>
+				</div>
+				<div class="agrupaMenuLateral">
+					<ul class="ulLateral">
+						<li class="liLateral">
+							<a href="/produtos" class="linkLateral azul">
+								Loja do Guia
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/telefones-uteis" class="linkLateral azul">
+								Telefones �teis
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/as-cidades" class="linkLateral azul">
+								As Cidades
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/sobre-os-aparados-da-serra" class="linkLateral azul">
+								Sobre os Aparados da Serra
+							</a>
+						</li>
+						<li class="liLateral">
+							<a href="/parques-nacionais" class="linkLateral azul">
+								Parques Nacionais
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="agrupaConteudo">
+				<div class="agrupaBanner" id="flashDestaque">
+					<!-- <script type="text/javascript">
+						var fo = new FlashObject("/imagens/flash/destaque.swf", "viewer", "758", "160", "8", "#FFFFFF");
+						fo.addParam("wmode", "transparent");
+						fo.addVariable("xmlURL", "/destaques-xml/");
+						fo.write("flashDestaque");
+					</script> -->
+
+					<ul class="bxslider2">
+<!-- %home_slider% -->
+                        <li><a href="{%link%}"><img src="{%img_destaque%}"/></a></li>
+<!-- %end_home_slider% -->
+					</ul>
+
+				</div>
+				<div class="conteudo">
+<!-- %fim% -->
+					<a href="/expedicao-aparados-4x4" class="bannerLinkCambara" target="_blank">
+					<!-- <a href="http://www.cambaradosul.org" class="bannerLinkCambara" target="_blank"> -->
+						<!-- <img src="imagens/bannerCambara.jpg" alt="Cambara do Sul" /> -->
+						<img src="imagens/bannerTrilha.png" alt="Trilha 4x4" />
+					</a>
+				</div>
+				<div class="lateral2">
+
+					<div class="bannerLateral2">
+						<script type="text/javascript">exibeFlash("/imagens/flash/d2promo.swf","167","110");</script>
+					</div>
+
+<!-- 
+					<div class="bannerLateral2">
+						<script type="text/javascript">exibeFlash("/imagens/flash/cavalgada.swf","167","110");</script>
+					</div> -->
+
+					<ul class="bxslider">
+						<li><a href="http://cavalgadas.guiaaparadosdaserra.com.br/"><img src="/imagens/fazendaSantana1.jpg"/></a></li>
+						<li><a href="http://cavalgadas.guiaaparadosdaserra.com.br/"><img src="/imagens/fazendaSantana2.jpg"/></a></li>
+					</ul>
+
+					<div class="bannerLateral2">
+						<img src="/imagens/bannerTropeiros.jpg" alt="" title="" />
+					</div>
+
+					<div class="bannerLateral2">
+						<img src="/imagens/abeta.jpg" alt="" title="" />
+					</div>
+
+
+					<div class="bannerLateral2">
+						<!-- <script type="text/javascript">exibeFlash("/imagens/flash/pousadaAlvorada2.swf","167","110");</script> -->
+
+						<div class="gallery autoplay items-2">
+						    <div id="item-1" class="control-operator"></div>
+						    <div id="item-2" class="control-operator"></div>
+
+							<a href="/onde-ficar/enviar/36">
+							    <figure class="item">
+							      <!-- <h1>Item 1</h1> -->
+							      <img src="/imagens/pousadaalvorada1.jpg">
+							    </figure>
+							
+							    <figure class="item">
+							      <!-- <h1>Item 2</h1> -->
+							      <img src="/imagens/pousadaalvorada2.jpg">
+							    </figure>
+							</a>
+
+						    <div class="controls">
+						      <a href="#item-1" class="control-button">�</a>
+						      <a href="#item-2" class="control-button">�</a>
+						    </div>
+					  	</div>
+
+					</div>
+					
+					<a href="/ecasg">
+						<img src="/imagens/ecas.png" style="width: 167px;margin-bottom: 10px;">
+					</a>
+<!-- 
+					<div class="bannerLateral2">
+						<script type="text/javascript">exibeFlash("/imagens/flash/pousadajoaodebarro.swf","167","110");</script>
+					</div> -->
+				</div>
+
+			</div>
+		</div>
+
+		<div class="agrupaRodape">
+			<div class="conteudoRodape">
+		    	<img src="/imagens/bgTopRodape.jpg" alt="" title="" class="imagemBixos" />
+		    	<p class="descRodape">
+		    		Aparados da Serra - Guia Aparados da Serra - Parque Nacional dos Aparados da Serra - Aparados da Serra Cavalgadas - Aparados da Serra Pacotes - Aparados da Serra SC - Aparados da Serra passeios - Aparados da Serra Pousadas - Aparados da Serra Hospedagem � 2010 - Todos os direitos reservados.
+		    	</p>
+		    	<p class="agrupaZaib">
+		    		Desenvolvido por:<br/>
+		    		<a href="http://www.zaib.com.br" target="_blank">Zaib Tecnologia</a>
+		    	</p>
+		    </div>
+		</div>
+		</div>
+	</body>
+</html>

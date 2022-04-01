@@ -1,0 +1,211 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	background-color: black;
+}
+p,ul,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,hr,form,table,tr,td {
+	margin: 0;
+	padding: 0;
+}
+#site {
+	margin: 0 auto;
+	width: 100%;
+	height: 300px;
+}
+.oculto {
+	display: none;
+}
+a img {
+	border: 0;
+}
+#topo {
+	width: 100%;
+	height: 151px;
+	float: left;
+	display: inline;
+	background-image: url(../imagens/fundoTopo.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: black;
+}
+#topoTrabalho {
+	width: 1002px;
+	height: 114px;
+	margin: 0 auto;	
+}
+#topoTrabalho img {
+	border: 0;
+}
+#menuBox {
+	width: 1004px;
+	height: 33px;
+	margin: 0 auto;
+	
+}
+#menu {
+	width: 906px;
+	height: 21px;
+	float: left;
+	display: inline;
+	margin-left: 58px;
+	margin-top: 7px !important;
+	margin-top: 3px;
+}
+
+#conteudo {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline;
+}
+
+#centerDestaque {
+	width: 100%;
+	height: 310px;
+	float: left;
+	display: inline;
+	
+}
+.trabalho {
+	width: 1004px;
+	height: auto;
+	margin: 0 auto;
+}
+.flashDestaque {
+	width: 991px;
+	height: 291px;
+	float: left;
+	display: inline;
+	margin-left: 6px;
+	margin-top: 10px;
+}
+
+#centerConteudo {
+	width: 100%;
+	height: 372px;
+	float: left;
+	display: inline;
+	background-color: white;
+}
+.tituloPagina {
+	width: 990px;
+	height: auto;
+	float: left;
+	display: inline;
+	margin-left: 5px;						
+	margin-top: 15px;
+}
+.tituloPagina img {
+	float: left;
+	display: inline;
+}
+
+.boxProdutos {
+	width: 153px;
+	height: 202px;
+	float: left;
+	display: inline;
+	margin-left: 40px;
+	margin-top: 20px;
+	font: 12px arial;
+	text-align: left;
+}
+.boxProdutos p {
+	width: 100%;
+	height: 40px;
+	float: left;
+	display: inline;
+	margin-top: 10px;
+}
+.boxProdutos h3 {
+	width: 100%;
+	height: 15px;
+	float: left;
+	display: inline;
+	font: 12px arial;
+	text-align: left;
+}
+.boxProdutos a {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline;
+	font: 12px arial;
+	color: #666666;
+	text-decoration: underline;
+	margin-top: 5px;
+}
+.boxImgProduto {
+	width: 145px;
+	height: 109px;
+	float: left;
+	display: inline;
+	padding: 3px;
+	border: 1px solid #cccccc;
+}
+#marcas {
+	width: 100%;
+	height: 47px;
+	float: left;
+	display: inline;
+	margin-top: 67px;
+	border: 1px solid #cccccc;
+}
+#marcas img {
+	border: 0;
+}
+
+#envolveRodape {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: inline;
+	margin-top: 10px;
+	padding-bottom: 20px;
+	
+}
+#rodape {
+	width: 1004px;
+	height: auto;
+	margin: 0 auto;
+}
+#rodape address {
+	width: 50%;
+	height: auto;
+	float: left;
+	display: inline;
+	margin-top: 8px;
+	margin-left: 15px;
+	text-align: left;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #999999;
+	line-height: 20px;
+}
+#rodape address a {
+	color: #DDDDDD;
+	text-decoration: none;
+}
+#rodape address a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#zaibTecnologia {
+	width: 35%;
+	height: auto;
+	float: right;
+	display: inline;
+	margin-top: 8px;
+	margin-right: 15px;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #999999;
+	text-align: right;
+	line-height: 16px;
+}
+#zaibTecnologia a {
+	color: #DDDDDD;
+}
+#zaibTecnologia a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}

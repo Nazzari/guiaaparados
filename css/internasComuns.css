@@ -1,0 +1,285 @@
+/*geral*/
+.agrupaTituloInterna {
+	width: 596px;
+	margin-bottom: 15px;
+}
+.tituloInterna {
+	font-size: 22px;
+	width: 579px;
+	padding: 5px 0px 5px 10px;
+}
+/*variações de cores do titulo*/
+.tituloVerde {
+	background-color: #D2F7C4;
+	border-left: 7px solid #546B49;
+	color: #546B49;
+}
+.tituloAzul {
+	background-color: #E7EEF1;
+	border-left: 7px solid #135575;
+	color: #135575;
+}
+.tituloOndeFicar {
+	background-color: #4A58FF;
+	color: white;
+}
+.tituloOndeComer {
+	background-color: #50862F;
+	color: white;
+}
+.tituloAgencias {
+	background-color: #E37D7D;
+	color: white;
+}
+.tituloOndeCompras {
+	background-color: #FEF8A7;
+	color: #666;
+}
+
+/**/
+.agrupaFotosInterna {
+	width: 205px;
+	margin-left: 20px;
+	display: inline;
+}
+.tituloPacote {
+	width: 360px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 13px;
+	color: #4E7414;
+}
+.tituloNoticia {
+	width: 360px;
+	font-weight: bold;
+	padding-left: 10px;
+	font-size: 13px;
+	color: #4E7414;
+}
+.agrupaTextoInterna {
+	width: 360px;
+	padding-left: 10px;
+}
+.agrupaTextoInternaGaleria {
+	width: 568px;
+	padding-left: 14px;
+}
+.agrupaFotosInternaGaleria {
+	width: 568px;
+	padding-top: 10px;
+	padding-left: 14px;
+}
+.agrupaFotosInternaGaleria a {
+	margin: 0px 3px 6px;
+	display: inline;
+}
+/**/
+/*internasOnde*/
+.agrupaDescLateral {
+	width: 360px;
+	padding-left: 10px;
+}
+.nomeCliente {
+	width: 350px;
+	font-size: 18px;
+}
+.endereco {
+	width: 350px;
+}
+.outrosDescs {
+	width: 350px;
+	padding-top: 10px;
+}
+.agrupaLink {
+	width: 350px;
+}
+a.linkDetalhes {
+
+}
+a.linkDetalhes:hover {
+
+}
+.agrupaTextoDescricao {
+	width: 560px;
+	padding: 5px 0px 10px 20px;
+	border-bottom: 4px solid #ccc;
+	margin-bottom: 5px;
+}
+.agrupaOutrasFotos {
+	width: 560px;
+}
+a.outrasFotos {
+	margin: 4px;
+	display: inline;
+}
+a.ft_compre {
+	margin: 4px;
+	display: inline;
+}
+/*fale conosco*/
+.agrupaDescricaoForm {
+	width: 578px;
+	padding-left: 18px;
+}
+.atentionDesc {
+	width: 578px;
+}
+.estrela {
+	float: none;
+	margin: 3px 6px 0px;
+	display: inline;
+}
+.agrupaFormulario {
+	margin-left: 18px;
+	display: inline;
+	width: 578px;
+}
+.formulario {
+	width: 578px;
+	padding-top: 20px;
+}
+.linhaForm {
+	width: 578px;
+	padding-bottom: 10px;
+}
+.labelComum {
+	width: 80px;
+	text-align: right;
+	padding: 3px 4px 0px 0px;
+}
+.inputComum {
+	background: #E7EEF1;
+	border: 1px solid #D2F7C4;
+	padding: 3px;
+	width: 335px;
+}
+.uf {
+	width: 35px;
+}
+.textArea {
+	background: #E7EEF1;
+	border: 1px solid #D2F7C4;
+	padding: 3px;
+	width: 335px;
+	height: 60px;
+}
+.selectUF {
+	border: 1px solid #D2F7C4;
+	padding: 3px 3px 2px 3px;
+}
+.telefone {
+	width: 90px;
+}
+.btEnviar {
+	float: right;
+	margin: 0px 152px 0px 0px;
+	display: inline;
+}
+label.error {
+	padding: 3px;
+	width: 65%;
+	text-align: left;
+	float: left;
+	display: inline;
+	margin-left: 80px;
+	margin-top: 6px;
+	color: red;
+
+}
+/**/
+/*parceiros*/
+.agrupaParceiros {
+	width: 576px;
+	margin-left: 20px;
+	display: inline;
+}
+.parceiro {
+	width: 250px;
+	margin: 19px 19px 0px 19px;
+	display: inline;
+	text-align: center;
+}
+/**/
+/*resultados da busca*/
+.descBusca {
+	width: 576px;
+	margin-left: 20px;
+	display: inline;
+}
+.numeroResultado {
+	float: none;
+	font-weight: bold;
+}
+.termosResultados {
+	float: none;
+	font-weight: bold;
+	color: green;
+}
+.agrupaResultados {
+	width: 576px;
+	margin-left: 20px;
+	display: inline;
+	border-top: 4px solid #ccc;
+	padding-top: 5px;
+	margin-top: 15px;
+}
+.tituloTopico {
+	width: 576px;
+	font-weight: bold;
+}
+.topicos {
+	width: 576px;
+}
+a.linkTopico {
+
+}
+a.linkTopico:hover {
+	text-decoration: none;
+}
+.palavraAchada {
+	background: green;
+	color: white;
+	float: none;
+}
+.bannerLateralEsquerda {
+	padding-top: 5px;
+	padding-left: 25px;
+}
+.agrupaTitulo{
+	margin-top: 10px;
+}
+.agrupaLinks{
+	width: 100%;
+	margin-top: 10px;
+}
+.agrupaLinks a{
+	margin-left: 15px;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	width: 100%;
+}
+.agrupaLinks a:hover{
+	text-decoration: underline;
+}
+.agrupaApoio{
+	width: 100%;
+	margin-top: 10px;
+}
+#apoiadorCambara{
+	float: right;
+	margin-right: 30px;
+	width: 208px;
+}
+.tituloInternaApoiador{
+	color: #FF9900;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	float: right;
+	margin-right: 140px;
+	margin-bottom: 10px;
+}
+.cemporcento{
+	width: 100%;
+}

@@ -1,0 +1,67 @@
+<!-- %inicio% -->
+<script language="javascript">
+	function showHide(id) {
+		var obj = document.getElementById(id);
+		var sinal = document.getElementById('sinal'+id);
+		
+		if(obj.style.display == "block") {
+			
+			obj.style.display = "none";
+			sinal.innerHTML = "+";
+		
+		} else 	{
+			obj.style.display = "block";	
+			sinal.innerHTML = "-";
+		}
+
+	}
+</script>
+	<div class="agrupaTituloInterna">
+		<p class="tituloInterna tituloOndeComer">ECASG - Equipe de condutores dos Aparados da Serra Geral</p>
+	</div>
+	<div class="agrupaFotosInterna">	
+		<img src="/imagens/ecas.png" alt="" class="none" style="width: 167px;margin-bottom: 10px;"/>
+		<a href="/imagens/ft_ecasg.jpg" rel="lightbox" class="lightbox">
+			<img src="/imagens/ft_ecasg.jpg" alt="" class="none" />
+		</a>
+	</div>
+	<div class="agrupaTextoDescricao">
+			ECASG é uma equipe de condutores de ecoturismo e turismo de aventura dos Aparados da Serra Geral. <br>
+			Efetuamos trilhas dentro e entorno dos Parques Nacionais de Aparados da Serra e Serra Geral. <br>
+			Conduzimos de 1 pessoa à grandes grupos de excursões. <br>
+			Oferecemos transporte, garrafas de água, ingressos, seguro de trilha e guiamento. Dependendo do passeio oferecemos equipamento de proteção individual (polainas) e lanche de trilha.Realizamos os passeios clássicos (Canyon Itaimbezinho e Canyon Fortaleza) e também passeios diferenciados como: Trilha do Rio do Boi, Trilha do Tigre Preto, Canyon da Encerra e outros diversos que complementam a região dos Aparados da Serra Geral.
+
+			Aparados da Serra Geral, RS-SC <br><br>
+ 
+			E-mail: diegosantana-1990@hotmail.com <br>
+			 
+			Fones: <br>
+			55 54 8141-6923 (Tim) <br>
+			55 54 9648-7204 (Vivo) <br>
+			55 54 9656-9729 (Vivo)
+	</div>
+<!-- %while% -->
+	<div class="agrupaFotosInterna">
+		<a href="{%ft_guia_grande%}" rel="lightbox" title="{%nm_guia%}" class="lightbox">
+			<img src="{%ft_guia%}" alt="" class="none" />
+		</a>		  					
+	</div>
+	<div class="agrupaDescLateral">
+		<p class="nomeCliente">
+			{%nm_guia%}
+		</p>
+		<p class="endereco">
+			{%tt_guia%}
+		</p>
+		<div class="agrupaLink">
+			<br />
+			<span id="sinal{%cd_guia%}">+</span><a href="javascript:;" onclick="showHide('{%cd_guia%}'); return false;" class="linkDetalhes">Detalhes</a>
+		</div>
+	</div>
+
+	<div class="agrupaTextoDescricao" >
+		<div id="{%cd_guia%}" style="display: none;">
+			{%ds_guia%}
+		</div>
+	</div>
+<!-- %fim% -->

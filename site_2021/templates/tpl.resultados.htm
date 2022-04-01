@@ -1,0 +1,53 @@
+<!-- %inicio% -->
+
+<div class="capa-interna">
+	<img src="../img/fundo-quem-somos.jpg">
+
+	<div class="container">
+		<h2>Resultados da busca</h2>
+	</div>
+</div>
+<br><br>
+<div class="container">
+					<div class="agrupaTituloInterna">
+						<p class="tituloInterna tituloVerde">Resultados da busca</p>
+					</div>
+					<p class="descBusca">
+						Foram encontrados <span class="numeroResultado">{%numResultados%}</span> item(s) com os termos: <span class="termosResultados">{%key%}</span>
+					</p>
+</div>
+<!-- %tipo_1% -->
+<div class="container">
+					<div class="agrupaResultados">
+						<div class="agrupaTituloTopico">
+							<p class="tituloTopico">
+								{%nmModulo%} - {%item%}
+							</p>
+							<div class="topicos">
+<!-- %while% -->
+								<br/>
+								<a href="/{%linkModulo%}" class="linkTopico">
+									{%titulo%}
+								</a>
+<!-- %fim% -->
+							</div>
+						</div>
+					</div>
+</div>
+<!-- %tipo_2% -->
+<div class="container">
+					<div class="agrupaResultados">
+						<div class="agrupaTituloTopico">
+							<p class="tituloTopico">
+								{%nmModulo%} - {%item%}
+							</p>
+							<div class="topicos">
+								<a href="/{%linkModulo%}" class="linkTopico">
+									{%descricao%}
+								</a>
+							</div>
+						</div>
+					</div>
+</div>
+
+
